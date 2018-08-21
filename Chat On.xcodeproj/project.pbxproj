@@ -71,15 +71,39 @@
 		1D5CDC58212B847200BCEF0A /* Chat On */ = {
 			isa = PBXGroup;
 			children = (
-				1D5CDC59212B847200BCEF0A /* AppDelegate.swift */,
-				1D5CDC5B212B847200BCEF0A /* WelcomeViewController.swift */,
-				1D5CDC5D212B847200BCEF0A /* Main.storyboard */,
+				1D9EDE0C212BB452003ED9A8 /* Controller */,
+				1D9EDE0B212BB449003ED9A8 /* Model */,
+				1D9EDE0A212BB427003ED9A8 /* View */,
 				1D5CDC60212B847400BCEF0A /* Assets.xcassets */,
-				1D5CDC62212B847400BCEF0A /* LaunchScreen.storyboard */,
 				1D5CDC65212B847400BCEF0A /* Info.plist */,
 				1D5CDC6B212B8D6200BCEF0A /* GoogleService-Info.plist */,
 			);
 			path = "Chat On";
+			sourceTree = "<group>";
+		};
+		1D9EDE0A212BB427003ED9A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D5CDC62212B847400BCEF0A /* LaunchScreen.storyboard */,
+				1D5CDC5D212B847200BCEF0A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D9EDE0B212BB449003ED9A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D9EDE0C212BB452003ED9A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D5CDC59212B847200BCEF0A /* AppDelegate.swift */,
+				1D5CDC5B212B847200BCEF0A /* WelcomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B5834FE093185137E5161A68 /* Pods */ = {
