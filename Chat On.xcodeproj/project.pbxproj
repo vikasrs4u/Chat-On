@@ -13,6 +13,8 @@
 		1D5CDC61212B847400BCEF0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5CDC60212B847400BCEF0A /* Assets.xcassets */; };
 		1D5CDC64212B847400BCEF0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5CDC62212B847400BCEF0A /* LaunchScreen.storyboard */; };
 		1D5CDC6C212B8D6300BCEF0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D5CDC6B212B8D6200BCEF0A /* GoogleService-Info.plist */; };
+		1D9EDE0E212BBCF3003ED9A8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDE0D212BBCF3003ED9A8 /* SignUpViewController.swift */; };
+		1D9EDE10212BC6E8003ED9A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDE0F212BC6E8003ED9A8 /* LoginViewController.swift */; };
 		B16796ED692259168377C5FB /* Pods_Chat_On.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E77FC9CCF5DBD7EC9F6F66C /* Pods_Chat_On.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		1D5CDC63212B847400BCEF0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D5CDC65212B847400BCEF0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D5CDC6B212B8D6200BCEF0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D9EDE0D212BBCF3003ED9A8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1D9EDE0F212BC6E8003ED9A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		39FB6012DE741E5E4D9D3078 /* Pods-Chat On.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On/Pods-Chat On.release.xcconfig"; sourceTree = "<group>"; };
 		8E77FC9CCF5DBD7EC9F6F66C /* Pods_Chat_On.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_On.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB66CF07927272E8E33F1D41 /* Pods-Chat On.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On/Pods-Chat On.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				1D5CDC59212B847200BCEF0A /* AppDelegate.swift */,
 				1D5CDC5B212B847200BCEF0A /* WelcomeViewController.swift */,
+				1D9EDE0D212BBCF3003ED9A8 /* SignUpViewController.swift */,
+				1D9EDE0F212BC6E8003ED9A8 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9EDE10212BC6E8003ED9A8 /* LoginViewController.swift in Sources */,
+				1D9EDE0E212BBCF3003ED9A8 /* SignUpViewController.swift in Sources */,
 				1D5CDC5C212B847200BCEF0A /* WelcomeViewController.swift in Sources */,
 				1D5CDC5A212B847200BCEF0A /* AppDelegate.swift in Sources */,
 			);
