@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customMessageCell" rowHeight="81" id="Qhd-Zf-M8e" customClass="CustomMessageCell" customModule="Chat_On" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qhd-Zf-M8e" id="sQu-sm-K6W">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="It3-sE-1Q5" userLabel="Message Background">
+                        <rect key="frame" x="61" y="8" width="251" height="65"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIM-Ue-ssY" userLabel="Sender Username">
+                                <rect key="frame" x="8" y="8" width="243" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAU-K9-sQo" userLabel="Message Body">
+                                <rect key="frame" x="8" y="28" width="243" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tAU-K9-sQo" secondAttribute="bottom" constant="16" id="357-t2-gzD"/>
+                            <constraint firstAttribute="trailing" secondItem="tAU-K9-sQo" secondAttribute="trailing" id="9vQ-zG-tjv"/>
+                            <constraint firstItem="tAU-K9-sQo" firstAttribute="top" secondItem="GIM-Ue-ssY" secondAttribute="bottom" constant="8" id="UMu-fb-qGw"/>
+                            <constraint firstAttribute="trailing" secondItem="GIM-Ue-ssY" secondAttribute="trailing" id="csg-8P-qml"/>
+                            <constraint firstItem="tAU-K9-sQo" firstAttribute="leading" secondItem="It3-sE-1Q5" secondAttribute="leading" constant="8" id="dIh-ST-IvW"/>
+                            <constraint firstItem="GIM-Ue-ssY" firstAttribute="top" secondItem="It3-sE-1Q5" secondAttribute="top" constant="8" id="mKD-9O-6ih"/>
+                            <constraint firstItem="GIM-Ue-ssY" firstAttribute="leading" secondItem="It3-sE-1Q5" secondAttribute="leading" constant="8" id="xsH-7G-oNP"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fi-AI-w2v" userLabel="Avatar Image View">
+                        <rect key="frame" x="0.0" y="14" width="53" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="53" id="f2P-Ll-4Rf"/>
+                            <constraint firstAttribute="height" constant="53" id="hhd-gI-atb"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5Fi-AI-w2v" firstAttribute="leading" secondItem="sQu-sm-K6W" secondAttribute="leading" id="5y3-Bv-zAH"/>
+                    <constraint firstItem="5Fi-AI-w2v" firstAttribute="centerY" secondItem="It3-sE-1Q5" secondAttribute="centerY" id="RFZ-yF-0GW"/>
+                    <constraint firstItem="It3-sE-1Q5" firstAttribute="top" secondItem="sQu-sm-K6W" secondAttribute="top" constant="8" id="Rvl-Xl-KyH"/>
+                    <constraint firstAttribute="trailing" secondItem="It3-sE-1Q5" secondAttribute="trailing" constant="8" id="iNR-7V-HZu"/>
+                    <constraint firstAttribute="bottom" secondItem="It3-sE-1Q5" secondAttribute="bottom" constant="8" id="ima-Qh-TWc"/>
+                    <constraint firstItem="It3-sE-1Q5" firstAttribute="leading" secondItem="5Fi-AI-w2v" secondAttribute="trailing" constant="8" id="mbW-dp-7Nh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="5Fi-AI-w2v" id="KB4-ll-jOQ"/>
+                <outlet property="messageBackground" destination="It3-sE-1Q5" id="m8O-y3-BZd"/>
+                <outlet property="messageBody" destination="tAU-K9-sQo" id="29L-at-qs8"/>
+                <outlet property="senderUsername" destination="GIM-Ue-ssY" id="289-X6-eeB"/>
+            </connections>
+            <point key="canvasLocation" x="-50" y="89.5"/>
+        </tableViewCell>
+    </objects>
+</document>

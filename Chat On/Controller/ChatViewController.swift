@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  ChatViewController.swift
 //  Chat On
 //
 //  Created by Vikas R S on 8/20/18.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class ChatViewController: UIViewController {
 
+    @IBOutlet weak var messageTableView: UITableView!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var emailTextfield: UITextField!
-    
-    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var messageTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 

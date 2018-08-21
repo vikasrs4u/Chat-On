@@ -10,6 +10,8 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var emailTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
