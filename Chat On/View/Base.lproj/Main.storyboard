@@ -105,7 +105,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Wm-ifW">
                                         <rect key="frame" x="16" y="178" width="343" height="40"/>
@@ -186,7 +186,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngn-1c-AcA">
                                         <rect key="frame" x="16" y="178" width="343" height="40"/>
@@ -198,6 +198,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpButtonClicked:" destination="e92-RK-e44" eventType="touchUpInside" id="74d-nH-blH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -340,6 +343,6 @@
         <image name="SignUp" width="980" height="2016"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Igi-Cr-JOJ"/>
+        <segue reference="GgJ-AC-JR7"/>
     </inferredMetricsTieBreakers>
 </document>
