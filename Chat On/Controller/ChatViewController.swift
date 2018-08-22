@@ -7,34 +7,40 @@
 //
 
 import UIKit
+import Firebase
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController
+{
 
     @IBOutlet weak var messageTableView: UITableView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var messageTextfield: UITextField!
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // This function is called when we click on logout button.
+    @IBAction func logOutButtonClicked(_ sender: UIBarButtonItem)
+    {
+        do
+        {
+            try Auth.auth().signOut()
+            // To take user back to root view i.e the first screen of our app.
+            navigationController?.popToRootViewController(animated: true)
+        }
+        catch
+        {
+            print("Error occured during Log out.")
+        }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+   
+
+
 
 }

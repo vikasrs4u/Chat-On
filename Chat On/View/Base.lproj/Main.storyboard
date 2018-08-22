@@ -286,7 +286,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="6Zv-tV-cyz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="6Zv-tV-cyz">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Zv-tV-cyz" id="h6d-In-G9U">
@@ -309,6 +309,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UbV-PY-YAf"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="P75-l2-mgv">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="a0e-Vp-jV5">
+                            <connections>
+                                <action selector="logOutButtonClicked:" destination="mhq-ae-Wfw" id="amW-3W-DmK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="heightConstraint" destination="ssM-b9-xV3" id="Cij-2N-WZW"/>
                         <outlet property="messageTableView" destination="zvw-Gb-nea" id="rKA-uP-8go"/>
