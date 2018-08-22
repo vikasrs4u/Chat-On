@@ -30,12 +30,15 @@ class ChatViewController: UIViewController
         do
         {
             try Auth.auth().signOut()
-            // To take user back to root view i.e the first screen of our app.
+            
+            // To take user back to rootview i.e the first screen of our app.
+
             navigationController?.popToRootViewController(animated: true)
         }
         catch
         {
-            print("Error occured during Log out.")
+            
+            print(error.localizedDescription)
         }
     
     }

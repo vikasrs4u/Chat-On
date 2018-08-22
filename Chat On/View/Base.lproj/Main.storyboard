@@ -78,7 +78,7 @@
         <!--Login-->
         <scene sceneID="uhH-93-lmh">
             <objects>
-                <viewController title="Login" id="qCD-N8-wcN" customClass="LoginViewController" customModule="Chat_On" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LoginView" storyboardIdentifier="LoginView" title="Login" id="qCD-N8-wcN" customClass="LoginViewController" customModule="Chat_On" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qdb-Sd-bJv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,6 +350,6 @@
         <image name="SignUp" width="980" height="2016"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GgJ-AC-JR7"/>
+        <segue reference="Igi-Cr-JOJ"/>
     </inferredMetricsTieBreakers>
 </document>
