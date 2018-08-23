@@ -117,6 +117,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonClicked:" destination="qCD-N8-wcN" eventType="touchUpInside" id="VoI-on-VSk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
