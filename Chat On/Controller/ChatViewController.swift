@@ -62,7 +62,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func configureTheTableViewCell()
     {
         messageTableViews.rowHeight = UITableViewAutomaticDimension
-        messageTableViews.estimatedRowHeight = 400.00
+        messageTableViews.estimatedRowHeight = UITableViewAutomaticDimension
     }
 
     // This function is called when we click on logout button.
