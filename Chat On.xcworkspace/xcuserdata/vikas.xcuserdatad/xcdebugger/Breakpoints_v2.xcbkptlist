@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On/Controller/ChatViewController.swift"
-            timestampString = "556676092.7494"
+            timestampString = "556690833.56637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "logOutButtonClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>

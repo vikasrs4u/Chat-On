@@ -292,9 +292,10 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="6Zv-tV-cyz">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Zv-tV-cyz" id="h6d-In-G9U">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Zv-tV-cyz" id="h6d-In-G9U">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <viewLayoutGuide key="safeArea" id="7K2-it-ozA"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -320,10 +321,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="heightConstraint" destination="ssM-b9-xV3" id="Cij-2N-WZW"/>
-                        <outlet property="messageTableView" destination="zvw-Gb-nea" id="rKA-uP-8go"/>
-                        <outlet property="messageTextfield" destination="sZF-7M-bYZ" id="6mX-6I-YZg"/>
-                        <outlet property="sendButton" destination="4Io-im-CtZ" id="0pb-Ie-BkJ"/>
+                        <outlet property="heightConstraints" destination="55n-JG-Al2" id="gPh-xr-mFU"/>
+                        <outlet property="messageTableViews" destination="zvw-Gb-nea" id="eg5-ys-358"/>
+                        <outlet property="messageTextfields" destination="sZF-7M-bYZ" id="2u9-ae-ruK"/>
+                        <outlet property="sendButtonsOutlet" destination="4Io-im-CtZ" id="ye6-4K-MdQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gN1-V1-20n" userLabel="First Responder" sceneMemberID="firstResponder"/>
