@@ -321,7 +321,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="heightConstraints" destination="55n-JG-Al2" id="gPh-xr-mFU"/>
+                        <outlet property="heightConstraints" destination="ssM-b9-xV3" id="PZ8-07-TeX"/>
                         <outlet property="messageTableViews" destination="zvw-Gb-nea" id="eg5-ys-358"/>
                         <outlet property="messageTextfields" destination="sZF-7M-bYZ" id="2u9-ae-ruK"/>
                         <outlet property="sendButtonsOutlet" destination="4Io-im-CtZ" id="ye6-4K-MdQ"/>

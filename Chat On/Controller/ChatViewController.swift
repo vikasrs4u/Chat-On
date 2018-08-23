@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate
 {
 
     @IBOutlet weak var messageTableViews: UITableView!
@@ -29,11 +29,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageTableViews.delegate = self
         messageTableViews.dataSource = self
         
+        // Since we have Text view, we need to regsiter our class as delegate for the text view
+        
+        messageTextfields.delegate = self
+        
         // We need to regsiter the custom cell, below is the code for the same
         messageTableViews.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
         
         // Method to resize the cell
         configureTheTableViewCell()
+        
+        
+        //Below is the code added to dismiss the keyboard. 
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
     }
     
@@ -85,6 +94,32 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
    
 
+    // Whenever the textView is being clicked then we want to know
+    
+    func textFieldDidBeginEditing(_ textField: UITextField)
+    {
+        // We know that height of key board is 258, height of our text field is 50
+        // 258 + 50 = 308
+        
+        heightConstraints.constant = 318
+        
+        // Below code is to redraw the layout again to update to new constraint
+        view.layoutIfNeeded()
+    }
 
 
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+        // We know that height of key board is 258, height of our text field is 50
+        // 258 + 50 = 308
+        
+        heightConstraints.constant = 50
+        
+        // Below code is to redraw the layout again to update to new constraint
+        view.layoutIfNeeded()
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
