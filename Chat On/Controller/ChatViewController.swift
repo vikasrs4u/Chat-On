@@ -40,7 +40,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         configureTheTableViewCell()
         
         
-        //Below is the code added to dismiss the keyboard. 
+        //Below is the code added to dismiss the keyboard.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -101,22 +101,28 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // We know that height of key board is 258, height of our text field is 50
         // 258 + 50 = 308
         
-        heightConstraints.constant = 318
-        
-        // Below code is to redraw the layout again to update to new constraint
-        view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.3)
+        {
+            self.heightConstraints.constant = 318
+            
+            // Below code is to redraw the layout again to update to new constraint
+            self.view.layoutIfNeeded()
+        }
+
     }
 
 
     func textFieldDidEndEditing(_ textField: UITextField)
     {
-        // We know that height of key board is 258, height of our text field is 50
-        // 258 + 50 = 308
+        // we have to bring back constraint to its original value 50
         
-        heightConstraints.constant = 50
-        
-        // Below code is to redraw the layout again to update to new constraint
-        view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.3)
+        {
+            self.heightConstraints.constant = 50
+            
+            // Below code is to redraw the layout again to update to new constraint
+            self.view.layoutIfNeeded()
+        }
     }
     
     @objc func dismissKeyboard() {
