@@ -349,7 +349,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background Image" width="5040" height="1835"/>
+        <image name="Background Image" width="2016" height="1512"/>
         <image name="Login" width="980" height="2016"/>
         <image name="SignUp" width="980" height="2016"/>
     </resources>
