@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -24,15 +25,21 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonClicked(_ sender: UIButton)
     {
+        SVProgressHUD.show()
+        
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!)
         { (result, error) in
             
             if(error != nil)
             {
-                print("Error in login")
+                let errorMessage:String = (error?.localizedDescription.description)!
+                
+                SVProgressHUD.showError(withStatus:errorMessage)
+            
             }
             else
             {
+                SVProgressHUD.showSuccess(withStatus: "Sucessfully Logged In")
                 self.performSegue(withIdentifier:"goToChat", sender: self)
             }
         }

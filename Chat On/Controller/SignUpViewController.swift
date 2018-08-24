@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class SignUpViewController: UIViewController
 {
@@ -27,6 +28,8 @@ class SignUpViewController: UIViewController
     //Method will be called when signup button is clicked.
     @IBAction func signUpButtonClicked(_ sender: UIButton)
     {
+        SVProgressHUD.show()
+        
         guard let email:String = emailTextfield.text else {return}
         guard let password:String = passwordTextfield.text else {return}
         
@@ -34,10 +37,15 @@ class SignUpViewController: UIViewController
         { (authResult, error) in
             if (error != nil)
             {
+                let errorMessage:String = (error?.localizedDescription.description)!
+                
+                SVProgressHUD.showError(withStatus:errorMessage)
+                
                 print(error!)
             }
             else
             {
+                SVProgressHUD.showSuccess(withStatus: "Sucessfully Signed Up")
                 
                 self.performSegue(withIdentifier:"goToChat" , sender: self)
             }

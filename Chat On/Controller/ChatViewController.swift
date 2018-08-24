@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate
 {
@@ -83,16 +84,22 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     // This function is called when we click on logout button.
     @IBAction func logOutButtonClicked(_ sender: UIBarButtonItem)
     {
+        SVProgressHUD.show()
         do
         {
             try Auth.auth().signOut()
             
             // To take user back to rootview i.e the first screen of our app.
+            
+            SVProgressHUD.showSuccess(withStatus: "Sucessfully Logged out")
 
             navigationController?.popToRootViewController(animated: true)
         }
         catch
         {
+            let errorMessage:String = error.localizedDescription.description
+            
+            SVProgressHUD.showError(withStatus:errorMessage)
             
             print(error.localizedDescription)
         }
