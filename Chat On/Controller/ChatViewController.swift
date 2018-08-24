@@ -51,6 +51,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         retriveMessageDataFromDatabase()
         
+        // In table view seperate line will no longer be shown
+        
+        messageTableViews.separatorStyle = .none
+        
     }
     
     
