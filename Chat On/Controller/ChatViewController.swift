@@ -125,6 +125,43 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    
+    @IBAction func sendButtonClicked(_ sender: UIButton)
+    {
+        dismissKeyboard()
+        
+        // Just Disabling the text field and send button till data is stored in database
+        messageTextfields.isEnabled = false
+        sendButtonsOutlet.isEnabled = false
+        
+        let messageDatabase = Database.database().reference().child("Messages")
+        
+        let messageDictionary = ["sender":Auth.auth().currentUser?.email,
+                                 "messageBody": messageTextfields.text!]
+        
+        messageDatabase.childByAutoId().setValue(messageDictionary)
+        {  (error,reference) in
+            
+            if(error != nil)
+            {
+                print(error!)
+            }
+            else
+            {
+                print("Message Sucessfully saved.")
+                self.messageTextfields.isEnabled = true
+                self.sendButtonsOutlet.isEnabled = true
+                self.messageTextfields.text = ""
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
