@@ -46,7 +46,7 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fi-AI-w2v" userLabel="Avatar Image View">
-                        <rect key="frame" x="0.0" y="14" width="53" height="53"/>
+                        <rect key="frame" x="0.0" y="8" width="53" height="53"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="53" id="f2P-Ll-4Rf"/>
                             <constraint firstAttribute="height" constant="53" id="hhd-gI-atb"/>
@@ -55,7 +55,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="5Fi-AI-w2v" firstAttribute="leading" secondItem="sQu-sm-K6W" secondAttribute="leading" id="5y3-Bv-zAH"/>
-                    <constraint firstItem="5Fi-AI-w2v" firstAttribute="centerY" secondItem="It3-sE-1Q5" secondAttribute="centerY" id="RFZ-yF-0GW"/>
+                    <constraint firstItem="5Fi-AI-w2v" firstAttribute="top" secondItem="sQu-sm-K6W" secondAttribute="top" constant="8" id="NL5-tE-LYD"/>
                     <constraint firstItem="It3-sE-1Q5" firstAttribute="top" secondItem="sQu-sm-K6W" secondAttribute="top" constant="8" id="Rvl-Xl-KyH"/>
                     <constraint firstAttribute="trailing" secondItem="It3-sE-1Q5" secondAttribute="trailing" constant="8" id="iNR-7V-HZu"/>
                     <constraint firstAttribute="bottom" secondItem="It3-sE-1Q5" secondAttribute="bottom" constant="8" id="ima-Qh-TWc"/>
