@@ -12,6 +12,10 @@ import Firebase
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate
 {
 
+    var messageArray:[Message] = [Message]()
+    
+    
+    
     @IBOutlet weak var messageTableViews: UITableView!
     
     @IBOutlet weak var sendButtonsOutlet: UIButton!
@@ -44,6 +48,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        retriveMessageDataFromDatabase()
+        
     }
     
     
@@ -51,16 +57,16 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 3
+        return messageArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell") as! CustomMessageCell
         
-        let message = ["First Message","Seconddndfbdfbdfbdnfbdfndbfnbdnfdbfndbfnbdfbdfbndfbndbfndbfnbdfbdnbfndbfndbfndb Message","Third Message"]
-        
-        cell.messageBody.text = message[indexPath.row]
+        cell.messageBody.text = messageArray[indexPath.row].messageBody
+        cell.senderUsername.text = messageArray[indexPath.row].sender
+        cell.avatarImageView.image = UIImage(named: "Default Avatar Image")
         
         return cell
         
@@ -126,6 +132,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    // Method is called when send button is clicked in chat box
     @IBAction func sendButtonClicked(_ sender: UIButton)
     {
         dismissKeyboard()
@@ -136,8 +143,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let messageDatabase = Database.database().reference().child("Messages")
         
-        let messageDictionary = ["sender":Auth.auth().currentUser?.email,
-                                 "messageBody": messageTextfields.text!]
+        let messageDictionary = ["Sender":Auth.auth().currentUser?.email,
+                                 "MessageBody": messageTextfields.text!]
         
         messageDatabase.childByAutoId().setValue(messageDictionary)
         {  (error,reference) in
@@ -154,15 +161,43 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.messageTextfields.text = ""
             }
         }
+    }
+    
+    //Method to retrive the data
+    
+    func retriveMessageDataFromDatabase()
+    {
+        let messageDatabase = Database.database().reference().child("Messages")
         
-        
+        messageDatabase.observe(.childAdded)
+        {
+            (snapshot) in
+            
+            let snapshotValue = snapshot.value as! Dictionary<String,String>
+            
+            let message = Message()
+            
+            message.messageBody = snapshotValue["MessageBody"]!
+            
+            message.sender = snapshotValue["Sender"]!
+            
+            self.messageArray.append(message)
+            
+            // to resize the cell
+            self.configureTheTableViewCell()
+            
+            // so that new data gets reloaded
+            self.messageTableViews.reloadData()
+            
+        }
         
     }
     
-    
-    
-    
-    @objc func dismissKeyboard() {
+   // Method to dismiss the keyboard
+    @objc func dismissKeyboard()
+    {
         view.endEditing(true)
     }
+    
+    
 }

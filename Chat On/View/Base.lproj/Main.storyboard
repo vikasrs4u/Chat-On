@@ -316,7 +316,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UbV-PY-YAf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="P75-l2-mgv">
+                    <navigationItem key="navigationItem" title="Chat On" id="P75-l2-mgv">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="a0e-Vp-jV5">
                             <connections>
                                 <action selector="logOutButtonClicked:" destination="mhq-ae-Wfw" id="amW-3W-DmK"/>
