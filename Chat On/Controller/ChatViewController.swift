@@ -204,30 +204,34 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         dismissKeyboard()
         
-        // Just Disabling the text field and send button till data is stored in database
-        messageTextfields.isEnabled = false
-        sendButtonsOutlet.isEnabled = false
-        
-        let messageDatabase = Database.database().reference().child("Messages")
-        
-        let messageDictionary = ["Sender":Auth.auth().currentUser?.email,
-                                 "MessageBody": messageTextfields.text!]
-        
-        messageDatabase.childByAutoId().setValue(messageDictionary)
-        {  (error,reference) in
+        if (messageTextfields.text?.count != 0)
+        {
+            // Just Disabling the text field and send button till data is stored in database
+            messageTextfields.isEnabled = false
+            sendButtonsOutlet.isEnabled = false
             
-            if(error != nil)
-            {
-                print(error!)
-            }
-            else
-            {
-                print("Message Sucessfully saved.")
-                self.messageTextfields.isEnabled = true
-                self.sendButtonsOutlet.isEnabled = true
-                self.messageTextfields.text = ""
+            let messageDatabase = Database.database().reference().child("Messages")
+            
+            let messageDictionary = ["Sender":Auth.auth().currentUser?.email,
+                                     "MessageBody": messageTextfields.text!]
+            
+            messageDatabase.childByAutoId().setValue(messageDictionary)
+            {  (error,reference) in
+                
+                if(error != nil)
+                {
+                    print(error!)
+                }
+                else
+                {
+                    print("Message Sucessfully saved.")
+                    self.messageTextfields.isEnabled = true
+                    self.sendButtonsOutlet.isEnabled = true
+                    self.messageTextfields.text = ""
+                }
             }
         }
+
     }
     
     //Method to retrive the data
