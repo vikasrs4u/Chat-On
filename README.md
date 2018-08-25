@@ -1,5 +1,5 @@
 # Chat On
-Chat On is a Chat app for iPhone that lets you chat with logged in user. Chat On is powered by Firebase real-time database and everyone logged into the app will get your message in realtime and can reply for the same.  
+Chat On is a Chat app for iPhone that lets you chat with all the logged in user. Chat On is powered by Firebase real-time database and everyone logged into the app will get your message in realtime and can reply for the same.  
 
 ### App Login Demo 
 
