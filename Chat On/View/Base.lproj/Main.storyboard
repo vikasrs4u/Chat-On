@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFE-C3-aEi">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Chat_On" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Image" translatesAutoresizingMaskIntoConstraints="NO" id="Xti-5G-bqI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iic-cq-yuC">
-                                <rect key="frame" x="16" y="541" width="343" height="45"/>
+                                <rect key="frame" x="16" y="652" width="343" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="1uz-47-pdR"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fc-F7-u4u">
-                                <rect key="frame" x="16" y="602" width="343" height="45"/>
+                                <rect key="frame" x="16" y="713" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="W7E-ma-QEp"/>
@@ -53,9 +53,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Xti-5G-bqI" secondAttribute="bottom" id="32i-MR-6mo"/>
                             <constraint firstAttribute="trailing" secondItem="Xti-5G-bqI" secondAttribute="trailing" id="KcX-7j-soz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Fc-F7-u4u" secondAttribute="trailing" constant="16" id="Oav-e3-GqS"/>
-                            <constraint firstItem="Xti-5G-bqI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Wkj-DQ-iHT"/>
                             <constraint firstItem="Xti-5G-bqI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cJ0-5l-nfp"/>
                             <constraint firstItem="0Fc-F7-u4u" firstAttribute="top" secondItem="Iic-cq-yuC" secondAttribute="bottom" constant="16" id="g3I-RN-tt7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Fc-F7-u4u" secondAttribute="bottom" constant="20" id="kx9-er-tM4"/>
@@ -80,14 +80,14 @@
             <objects>
                 <viewController restorationIdentifier="LoginView" storyboardIdentifier="LoginView" title="Login" id="qCD-N8-wcN" customClass="LoginViewController" customModule="Chat_On" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qdb-Sd-bJv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="oNa-eM-wgS">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFh-Gk-Xst">
-                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="300"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5pY-ro-uzg">
                                         <rect key="frame" x="16" y="82" width="343" height="40"/>
@@ -142,10 +142,10 @@
                             <constraint firstItem="oNa-eM-wgS" firstAttribute="top" secondItem="yDA-oa-3vL" secondAttribute="top" id="1GS-h5-DYY"/>
                             <constraint firstItem="YFh-Gk-Xst" firstAttribute="leading" secondItem="yDA-oa-3vL" secondAttribute="leading" id="JlD-mu-DtT"/>
                             <constraint firstItem="YFh-Gk-Xst" firstAttribute="top" secondItem="yDA-oa-3vL" secondAttribute="top" id="PYf-i5-0gh"/>
-                            <constraint firstItem="oNa-eM-wgS" firstAttribute="bottom" secondItem="yDA-oa-3vL" secondAttribute="bottom" id="UiY-iF-hXD"/>
                             <constraint firstItem="oNa-eM-wgS" firstAttribute="leading" secondItem="yDA-oa-3vL" secondAttribute="leading" id="V1f-Kt-kkP"/>
                             <constraint firstItem="YFh-Gk-Xst" firstAttribute="trailing" secondItem="yDA-oa-3vL" secondAttribute="trailing" id="p9q-cl-w0a"/>
                             <constraint firstItem="oNa-eM-wgS" firstAttribute="trailing" secondItem="yDA-oa-3vL" secondAttribute="trailing" id="zSA-EH-8dW"/>
+                            <constraint firstAttribute="bottom" secondItem="oNa-eM-wgS" secondAttribute="bottom" id="zpv-9l-cRE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yDA-oa-3vL"/>
                     </view>
@@ -164,14 +164,14 @@
             <objects>
                 <viewController title="Sign Up" id="e92-RK-e44" customClass="SignUpViewController" customModule="Chat_On" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdw-a6-kfs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignUp" translatesAutoresizingMaskIntoConstraints="NO" id="pQF-lQ-16C">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ft-3v-P3q" userLabel="Top Container View">
-                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="300"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6m6-Hs-er5">
                                         <rect key="frame" x="16" y="82" width="343" height="40"/>
@@ -225,10 +225,10 @@
                         <constraints>
                             <constraint firstItem="1ft-3v-P3q" firstAttribute="leading" secondItem="1Jd-xL-PeY" secondAttribute="leading" id="3xB-hC-QK7"/>
                             <constraint firstItem="pQF-lQ-16C" firstAttribute="top" secondItem="1Jd-xL-PeY" secondAttribute="top" id="5Nu-fj-c9d"/>
+                            <constraint firstAttribute="bottom" secondItem="pQF-lQ-16C" secondAttribute="bottom" id="QbZ-3k-NaU"/>
                             <constraint firstItem="pQF-lQ-16C" firstAttribute="trailing" secondItem="1Jd-xL-PeY" secondAttribute="trailing" id="dpa-JE-4kj"/>
                             <constraint firstItem="pQF-lQ-16C" firstAttribute="leading" secondItem="1Jd-xL-PeY" secondAttribute="leading" id="f8U-5Q-3Gr"/>
                             <constraint firstItem="1ft-3v-P3q" firstAttribute="top" secondItem="1Jd-xL-PeY" secondAttribute="top" id="pzj-NW-aaL"/>
-                            <constraint firstItem="pQF-lQ-16C" firstAttribute="bottom" secondItem="1Jd-xL-PeY" secondAttribute="bottom" id="uG2-pK-xwN"/>
                             <constraint firstItem="1ft-3v-P3q" firstAttribute="trailing" secondItem="1Jd-xL-PeY" secondAttribute="trailing" id="ycq-ot-wt9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Jd-xL-PeY"/>
@@ -248,11 +248,11 @@
             <objects>
                 <viewController title="Chat On" id="mhq-ae-Wfw" customClass="ChatViewController" customModule="Chat_On" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="42x-gd-Awv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fC2-W9-TWa" userLabel="Compose View">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="752" width="375" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter chat text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZF-7M-bYZ">
                                         <rect key="frame" x="8" y="0.0" width="291" height="40"/>
@@ -289,14 +289,14 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zvw-Gb-nea">
-                                <rect key="frame" x="0.0" y="64" width="375" height="545"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="656"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="6Zv-tV-cyz">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Zv-tV-cyz" id="h6d-In-G9U">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <viewLayoutGuide key="safeArea" id="7K2-it-ozA"/>
                                         </tableViewCellContentView>
@@ -306,7 +306,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fC2-W9-TWa" firstAttribute="bottom" secondItem="UbV-PY-YAf" secondAttribute="bottom" id="Kq2-er-XUH"/>
+                            <constraint firstAttribute="bottom" secondItem="fC2-W9-TWa" secondAttribute="bottom" constant="10" id="BG7-WV-e3h"/>
                             <constraint firstItem="fC2-W9-TWa" firstAttribute="trailing" secondItem="UbV-PY-YAf" secondAttribute="trailing" id="Smy-ma-9oi"/>
                             <constraint firstItem="zvw-Gb-nea" firstAttribute="top" secondItem="UbV-PY-YAf" secondAttribute="top" id="Tkh-qa-R4M"/>
                             <constraint firstItem="zvw-Gb-nea" firstAttribute="trailing" secondItem="UbV-PY-YAf" secondAttribute="trailing" id="VMv-H0-9Lq"/>
@@ -339,7 +339,7 @@
             <objects>
                 <navigationController id="dFE-C3-aEi" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PCk-nR-Sxy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -352,9 +352,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background Image" width="2016" height="1512"/>
-        <image name="Login" width="980" height="2016"/>
-        <image name="SignUp" width="980" height="2016"/>
+        <image name="Background Image" width="1344" height="1008"/>
+        <image name="Login" width="653" height="1344"/>
+        <image name="SignUp" width="653" height="1344"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Igi-Cr-JOJ"/>
