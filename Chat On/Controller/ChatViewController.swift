@@ -15,6 +15,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 {
     var messageArray:[Message] = [Message]()
     
+    var keyboardHeight:CGFloat = 256
+    
+    var isKeyBoardCurrentlyShown = false
+    
     @IBOutlet weak var tableViewHeightConstriant: NSLayoutConstraint!
     @IBOutlet weak var messageTableViews: UITableView!
     
@@ -54,6 +58,37 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         messageTableViews.separatorStyle = .none
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+
+        
+    }
+    
+
+
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        {
+            keyboardHeight = keyboardSize.height
+            print(keyboardHeight)
+            
+            UIView.animate(withDuration: 0.3)
+            {
+                if(!self.isKeyBoardCurrentlyShown)
+                {
+                  self.heightConstraints.constant = self.heightConstraints.constant + self.keyboardHeight
+                  self.isKeyBoardCurrentlyShown = true
+                }
+                
+                
+                // Below code is to redraw the layout again to update to new constraint
+                self.view.layoutIfNeeded()
+                
+                let indexPath = IndexPath(row: self.messageArray.count-1, section: 0);
+                self.messageTableViews.scrollToRow(at: indexPath, at:.bottom, animated: false)
+                
+            }
+        }
     }
     
     
@@ -129,25 +164,25 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
    
 
-    // Whenever the textView is being clicked then we want to know
-    
-    func textFieldDidBeginEditing(_ textField: UITextField)
-    {
-        // We know that height of key board is 258, height of our text field is 50
-        // 258 + 50 = 308
-        
-        UIView.animate(withDuration: 0.3)
-        {
-            self.heightConstraints.constant = 318
-            // Below code is to redraw the layout again to update to new constraint
-            self.view.layoutIfNeeded()
-            
-            let indexPath = IndexPath(row: self.messageArray.count-1, section: 0);
-            self.messageTableViews.scrollToRow(at: indexPath, at:.bottom, animated: false)
-            
-        }
-
-    }
+//    // Whenever the textView is being clicked then we want to know
+//    
+//    func textFieldDidBeginEditing(_ textField: UITextField)
+//    {
+//        // We know that height of key board is 258, height of our text field is 50
+//        // 258 + 50 = 308
+//        
+//        UIView.animate(withDuration: 0.3)
+//        {
+//            self.heightConstraints.constant = self.heightConstraints.constant + self.keyboardHeight
+//            // Below code is to redraw the layout again to update to new constraint
+//            self.view.layoutIfNeeded()
+//            
+//            let indexPath = IndexPath(row: self.messageArray.count-1, section: 0);
+//            self.messageTableViews.scrollToRow(at: indexPath, at:.bottom, animated: false)
+//            
+//        }
+//
+//    }
 
 
     func textFieldDidEndEditing(_ textField: UITextField)
@@ -156,9 +191,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         UIView.animate(withDuration: 0.3)
         {
-            self.heightConstraints.constant = 50
+            self.heightConstraints.constant = 45
             // Below code is to redraw the layout again to update to new constraint
             self.view.layoutIfNeeded()
+            self.isKeyBoardCurrentlyShown = false
         }
     }
     
