@@ -13,11 +13,9 @@ import ChameleonFramework
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate
 {
-
     var messageArray:[Message] = [Message]()
     
-    
-    
+    @IBOutlet weak var tableViewHeightConstriant: NSLayoutConstraint!
     @IBOutlet weak var messageTableViews: UITableView!
     
     @IBOutlet weak var sendButtonsOutlet: UIButton!
@@ -63,6 +61,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        
         return messageArray.count
     }
     
@@ -76,8 +75,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if(messageArray[indexPath.row].sender == Auth.auth().currentUser?.email)
         {
-            cell.avatarImageView.backgroundColor = UIColor.flatForestGreen()
-            cell.messageBackground.backgroundColor = UIColor.flatLime()
+            cell.avatarImageView.backgroundColor = UIColor.flatSkyBlue()
+            cell.messageBackground.backgroundColor = UIColor.flatMint()
 
         }
         else
@@ -90,11 +89,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             cell.avatarImageView.image = UIImage(named: "Vikas")
         }
-        
+
         return cell
         
     }
     
+
     
     // If data in the cell is too long, then cell should resize itself
     func configureTheTableViewCell()
@@ -139,9 +139,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         UIView.animate(withDuration: 0.3)
         {
             self.heightConstraints.constant = 318
-            
             // Below code is to redraw the layout again to update to new constraint
             self.view.layoutIfNeeded()
+            
+            let indexPath = IndexPath(row: self.messageArray.count-1, section: 0);
+            self.messageTableViews.scrollToRow(at: indexPath, at:.bottom, animated: false)
+            
         }
 
     }
@@ -154,7 +157,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         UIView.animate(withDuration: 0.3)
         {
             self.heightConstraints.constant = 50
-            
             // Below code is to redraw the layout again to update to new constraint
             self.view.layoutIfNeeded()
         }
@@ -217,6 +219,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             // so that new data gets reloaded
             self.messageTableViews.reloadData()
+            
+            let indexPath = IndexPath(row: self.messageArray.count-1, section: 0);
+            self.messageTableViews.scrollToRow(at: indexPath, at:.bottom, animated: false)
             
         }
         
