@@ -68,7 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="NVE-QZ-mR7"/>
                     <connections>
-                        <segue destination="mhq-ae-Wfw" kind="show" identifier="goToChat" id="iFO-Ak-9YV"/>
+                        <segue destination="mhq-ae-Wfw" kind="show" identifier="goToChatFromWelcome" id="iFO-Ak-9YV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -357,6 +357,6 @@
         <image name="SignUp" width="653" height="1344"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Igi-Cr-JOJ"/>
+        <segue reference="iFO-Ak-9YV"/>
     </inferredMetricsTieBreakers>
 </document>
