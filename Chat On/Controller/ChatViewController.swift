@@ -27,6 +27,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var heightConstraints: NSLayoutConstraint!
     
     
+    @IBOutlet weak var navigationProfileImageOutlet: UIImageView!
     @IBOutlet weak var navigationBarOutlet: UINavigationItem!
     
     @IBOutlet weak var messageTextfields: UITextField!
@@ -66,6 +67,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationBarOutlet.title = Auth.auth().currentUser?.email
         
         navigationBarOutlet.hidesBackButton = true
+        
+        if(Auth.auth().currentUser?.email == "vshetty@scu.edu")
+        {
+           navigationProfileImageOutlet.image  = UIImage(named: "Vikas")
+        }
+        else
+        {
+            navigationProfileImageOutlet.image  = UIImage(named: "Default Avatar Image")
+            navigationProfileImageOutlet.backgroundColor = UIColor.flatSkyBlue()
+            
+        }
+        
+        navigationProfileImageOutlet.layer.cornerRadius = 20
+        navigationProfileImageOutlet.layer.masksToBounds = true
 
         
     }
@@ -114,6 +129,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.messageBody.text = messageArray[indexPath.row].messageBody
         cell.senderUsername.text = messageArray[indexPath.row].sender
         cell.avatarImageView.image = UIImage(named: "Default Avatar Image")
+        
+        // To make the image avatars to be rounded
+        cell.avatarImageView.layer.cornerRadius = 26
+        cell.avatarImageView.layer.masksToBounds = true
+        
+        // To make the message cell have rounded corners
+        cell.messageBackground.layer.cornerRadius = 20;
+        cell.messageBackground.layer.masksToBounds = true;
+        
         
         if(messageArray[indexPath.row].sender == Auth.auth().currentUser?.email)
         {

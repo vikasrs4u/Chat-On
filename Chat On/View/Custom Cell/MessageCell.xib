@@ -19,16 +19,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="It3-sE-1Q5" userLabel="Message Background">
-                        <rect key="frame" x="61" y="8" width="251" height="65"/>
+                        <rect key="frame" x="63" y="8" width="249" height="65"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIM-Ue-ssY" userLabel="Sender Username">
-                                <rect key="frame" x="8" y="8" width="243" height="11.5"/>
+                                <rect key="frame" x="8" y="8" width="241" height="11.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAU-K9-sQo" userLabel="Message Body">
-                                <rect key="frame" x="8" y="27.5" width="243" height="21.5"/>
+                                <rect key="frame" x="8" y="27.5" width="241" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Fi-AI-w2v" userLabel="Avatar Image View">
-                        <rect key="frame" x="0.0" y="8" width="53" height="53"/>
+                        <rect key="frame" x="2" y="8" width="53" height="53"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="53" id="f2P-Ll-4Rf"/>
                             <constraint firstAttribute="height" constant="53" id="hhd-gI-atb"/>
@@ -54,7 +54,7 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="5Fi-AI-w2v" firstAttribute="leading" secondItem="sQu-sm-K6W" secondAttribute="leading" id="5y3-Bv-zAH"/>
+                    <constraint firstItem="5Fi-AI-w2v" firstAttribute="leading" secondItem="sQu-sm-K6W" secondAttribute="leading" constant="2" id="5y3-Bv-zAH"/>
                     <constraint firstItem="5Fi-AI-w2v" firstAttribute="top" secondItem="sQu-sm-K6W" secondAttribute="top" constant="8" id="NL5-tE-LYD"/>
                     <constraint firstItem="It3-sE-1Q5" firstAttribute="top" secondItem="sQu-sm-K6W" secondAttribute="top" constant="8" id="Rvl-Xl-KyH"/>
                     <constraint firstAttribute="trailing" secondItem="It3-sE-1Q5" secondAttribute="trailing" constant="8" id="iNR-7V-HZu"/>
