@@ -26,6 +26,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var heightConstraints: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var navigationBarOutlet: UINavigationItem!
+    
     @IBOutlet weak var messageTextfields: UITextField!
     
     override func viewDidLoad()
@@ -59,6 +62,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageTableViews.separatorStyle = .none
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+        
+        navigationBarOutlet.title = Auth.auth().currentUser?.email
 
         
     }

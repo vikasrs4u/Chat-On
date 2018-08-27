@@ -327,12 +327,13 @@
                         <outlet property="heightConstraints" destination="ssM-b9-xV3" id="PZ8-07-TeX"/>
                         <outlet property="messageTableViews" destination="zvw-Gb-nea" id="eg5-ys-358"/>
                         <outlet property="messageTextfields" destination="sZF-7M-bYZ" id="2u9-ae-ruK"/>
+                        <outlet property="navigationBarOutlet" destination="P75-l2-mgv" id="9CE-wc-n9r"/>
                         <outlet property="sendButtonsOutlet" destination="4Io-im-CtZ" id="ye6-4K-MdQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gN1-V1-20n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528.8000000000002" y="-579.76011994002999"/>
+            <point key="canvasLocation" x="2528.8000000000002" y="-580.04926108374389"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iAs-CN-ID7">
