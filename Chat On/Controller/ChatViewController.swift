@@ -64,6 +64,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         
         navigationBarOutlet.title = Auth.auth().currentUser?.email
+        
+        navigationBarOutlet.hidesBackButton = true
 
         
     }
