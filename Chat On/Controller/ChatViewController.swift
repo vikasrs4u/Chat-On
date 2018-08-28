@@ -82,11 +82,21 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationProfileImageOutlet.layer.cornerRadius = 20
         navigationProfileImageOutlet.layer.masksToBounds = true
 
+        messageTextfields.layer.cornerRadius = 20
+        messageTextfields.layer.masksToBounds = true
         
+        sendButtonsOutlet.layer.cornerRadius = 20
+        sendButtonsOutlet.layer.masksToBounds = true
+        
+        // nofification to check if message textfield has some data change or not. 
+        NotificationCenter.default.addObserver(self, selector: #selector(changeSendButtonColor), name: .UITextFieldTextDidChange, object: nil)
+        
+
     }
     
 
-
+ 
+    
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
@@ -259,11 +269,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.messageTextfields.isEnabled = true
                     self.sendButtonsOutlet.isEnabled = true
                     self.messageTextfields.text = ""
+                    self.sendButtonsOutlet.setTitleColor(UIColor.white, for: .normal)
                 }
             }
         }
 
     }
+    
+    
     
     //Method to retrive the data
     
@@ -296,6 +309,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
+    }
+    
+    // Method to change button font color to blue when text is present.
+    @objc func changeSendButtonColor()
+    {
+        if (messageTextfields.text?.count == 0)
+        {
+            sendButtonsOutlet.setTitleColor(UIColor.white, for: .normal)
+            
+        }
+        else
+        {
+          sendButtonsOutlet.setTitleColor(UIColor(hexString:"2969D2"), for: .normal)
+        }
     }
     
    // Method to dismiss the keyboard
