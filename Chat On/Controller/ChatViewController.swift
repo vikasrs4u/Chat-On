@@ -32,6 +32,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var messageTextfields: UITextField!
     
+    
+    @IBOutlet weak var messageButtonWidthConstriant: NSLayoutConstraint!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -88,15 +91,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         sendButtonsOutlet.layer.cornerRadius = 20
         sendButtonsOutlet.layer.masksToBounds = true
         
+        // By default when view loads send button should not be shown
+        messageButtonWidthConstriant.constant = 0
+        
         // nofification to check if message textfield has some data change or not. 
         NotificationCenter.default.addObserver(self, selector: #selector(changeSendButtonColor), name: .UITextFieldTextDidChange, object: nil)
         
 
     }
-    
-
- 
-    
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
@@ -204,28 +206,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     }
    
-
-//    // Whenever the textView is being clicked then we want to know
-//    
-//    func textFieldDidBeginEditing(_ textField: UITextField)
-//    {
-//        // We know that height of key board is 258, height of our text field is 50
-//        // 258 + 50 = 308
-//        
-//        UIView.animate(withDuration: 0.3)
-//        {
-//            self.heightConstraints.constant = self.heightConstraints.constant + self.keyboardHeight
-//            // Below code is to redraw the layout again to update to new constraint
-//            self.view.layoutIfNeeded()
-//            
-//            let indexPath = IndexPath(row: self.messageArray.count-1, section: 0);
-//            self.messageTableViews.scrollToRow(at: indexPath, at:.bottom, animated: false)
-//            
-//        }
-//
-//    }
-
-
     func textFieldDidEndEditing(_ textField: UITextField)
     {
         // we have to bring back constraint to its original value 50
@@ -311,17 +291,22 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    // Method to change button font color to blue when text is present.
+    // Method to show or hide the send button and also to make send button a circle
     @objc func changeSendButtonColor()
     {
         if (messageTextfields.text?.count == 0)
         {
-            sendButtonsOutlet.setTitleColor(UIColor.white, for: .normal)
-            
+            sendButtonsOutlet.layer.cornerRadius = 20
+            sendButtonsOutlet.layer.masksToBounds = true
+            sendButtonsOutlet.backgroundColor = UIColor.clear
+            messageButtonWidthConstriant.constant = 0
         }
         else
         {
-          sendButtonsOutlet.setTitleColor(UIColor(hexString:"2969D2"), for: .normal)
+            messageButtonWidthConstriant.constant = 30
+            sendButtonsOutlet.layer.cornerRadius = 15
+            sendButtonsOutlet.layer.masksToBounds = true
+            sendButtonsOutlet.backgroundColor = UIColor(hexString:"2969D2")
         }
     }
     

@@ -255,7 +255,7 @@
                                 <rect key="frame" x="0.0" y="420" width="320" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter chat text" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="sZF-7M-bYZ">
-                                        <rect key="frame" x="8" y="0.0" width="236" height="40"/>
+                                        <rect key="frame" x="8" y="0.0" width="266" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="BmR-Gs-CrN"/>
                                         </constraints>
@@ -264,14 +264,14 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Io-im-CtZ">
-                                        <rect key="frame" x="252" y="0.0" width="60" height="40"/>
+                                        <rect key="frame" x="282" y="5" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="55n-JG-Al2"/>
-                                            <constraint firstAttribute="width" constant="60" id="HI5-Yt-cLR"/>
+                                            <constraint firstAttribute="height" constant="30" id="55n-JG-Al2"/>
+                                            <constraint firstAttribute="width" constant="30" id="HI5-Yt-cLR"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Send">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="↑">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -338,6 +338,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="heightConstraints" destination="ssM-b9-xV3" id="PZ8-07-TeX"/>
+                        <outlet property="messageButtonWidthConstriant" destination="HI5-Yt-cLR" id="imu-Qg-YVw"/>
                         <outlet property="messageTableViews" destination="zvw-Gb-nea" id="eg5-ys-358"/>
                         <outlet property="messageTextfields" destination="sZF-7M-bYZ" id="2u9-ae-ruK"/>
                         <outlet property="navigationBarOutlet" destination="P75-l2-mgv" id="9CE-wc-n9r"/>
