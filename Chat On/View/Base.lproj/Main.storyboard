@@ -171,10 +171,10 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ft-3v-P3q" userLabel="Top Container View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="400"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6m6-Hs-er5">
-                                        <rect key="frame" x="16" y="82" width="288" height="40"/>
+                                        <rect key="frame" x="16" y="132" width="288" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Ifw-SV-sJi"/>
                                         </constraints>
@@ -183,7 +183,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIa-eO-P3A">
-                                        <rect key="frame" x="16" y="130" width="288" height="40"/>
+                                        <rect key="frame" x="16" y="180" width="288" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="pUf-Vi-av7"/>
                                         </constraints>
@@ -192,7 +192,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngn-1c-AcA">
-                                        <rect key="frame" x="16" y="178" width="288" height="40"/>
+                                        <rect key="frame" x="16" y="228" width="288" height="40"/>
                                         <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="JCt-3G-HxL"/>
@@ -205,13 +205,22 @@
                                             <action selector="signUpButtonClicked:" destination="e92-RK-e44" eventType="touchUpInside" id="74d-nH-blH"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default Avatar Image" translatesAutoresizingMaskIntoConstraints="NO" id="Thg-b1-A6x">
+                                        <rect key="frame" x="110" y="24" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="FaW-qd-jsf"/>
+                                            <constraint firstAttribute="width" constant="100" id="T08-47-CuM"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="6m6-Hs-er5" firstAttribute="top" secondItem="Thg-b1-A6x" secondAttribute="bottom" constant="8" id="BDR-g6-HsQ"/>
                                     <constraint firstItem="aIa-eO-P3A" firstAttribute="leading" secondItem="1ft-3v-P3q" secondAttribute="leading" constant="16" id="BMC-Ye-miI"/>
                                     <constraint firstItem="6m6-Hs-er5" firstAttribute="leading" secondItem="1ft-3v-P3q" secondAttribute="leading" constant="16" id="HFP-XA-mRo"/>
-                                    <constraint firstAttribute="height" constant="300" id="LNy-OL-Icd"/>
+                                    <constraint firstAttribute="height" constant="400" id="LNy-OL-Icd"/>
                                     <constraint firstItem="aIa-eO-P3A" firstAttribute="top" secondItem="6m6-Hs-er5" secondAttribute="bottom" constant="8" id="MD2-To-djz"/>
                                     <constraint firstItem="aIa-eO-P3A" firstAttribute="centerY" secondItem="1ft-3v-P3q" secondAttribute="centerY" id="Mdl-i9-u8a"/>
+                                    <constraint firstItem="Thg-b1-A6x" firstAttribute="centerX" secondItem="1ft-3v-P3q" secondAttribute="centerX" id="R3b-LW-tT6"/>
                                     <constraint firstItem="Ngn-1c-AcA" firstAttribute="top" secondItem="aIa-eO-P3A" secondAttribute="bottom" constant="8" id="Uot-4y-5gS"/>
                                     <constraint firstAttribute="trailing" secondItem="aIa-eO-P3A" secondAttribute="trailing" constant="16" id="XYw-im-gAa"/>
                                     <constraint firstAttribute="trailing" secondItem="6m6-Hs-er5" secondAttribute="trailing" constant="16" id="YKi-mw-so0"/>
@@ -236,6 +245,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="6m6-Hs-er5" id="n1a-Ye-Eo9"/>
                         <outlet property="passwordTextfield" destination="aIa-eO-P3A" id="l44-CR-PJn"/>
+                        <outlet property="signUpImageViewOutlet" destination="Thg-b1-A6x" id="qFR-YN-enb"/>
                         <segue destination="mhq-ae-Wfw" kind="show" identifier="goToChat" id="GgJ-AC-JR7"/>
                     </connections>
                 </viewController>
@@ -369,10 +379,11 @@
     </scenes>
     <resources>
         <image name="Background Image" width="2016" height="1512"/>
+        <image name="Default Avatar Image" width="250" height="250"/>
         <image name="Login" width="980" height="2016"/>
         <image name="SignUp" width="980" height="2016"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iFO-Ak-9YV"/>
+        <segue reference="GgJ-AC-JR7"/>
     </inferredMetricsTieBreakers>
 </document>

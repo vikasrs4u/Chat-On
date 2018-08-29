@@ -15,12 +15,16 @@ class SignUpViewController: UIViewController
 
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var signUpImageViewOutlet: UIImageView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Code to make signup image view look round, instead of square.
+        signUpImageViewOutlet.layer.cornerRadius = 50
+        signUpImageViewOutlet.layer.masksToBounds = true
+        signUpImageViewOutlet.backgroundColor = UIColor.flatSkyBlue()
     }
 
     // MARK: - SignUp
