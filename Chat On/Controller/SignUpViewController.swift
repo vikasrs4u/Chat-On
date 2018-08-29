@@ -26,6 +26,10 @@ class SignUpViewController: UIViewController
         signUpImageViewOutlet.layer.cornerRadius = 50
         signUpImageViewOutlet.layer.masksToBounds = true
         signUpImageViewOutlet.backgroundColor = UIColor.flatSkyBlue()
+        
+        // This code is to enable signup image and make user select new image from gallery
+        signUpImageViewOutlet.isUserInteractionEnabled = true
+        signUpImageViewOutlet.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedOnImageView)))
     }
 
     // MARK: - SignUp
@@ -84,7 +88,6 @@ class SignUpViewController: UIViewController
             
         }
     }
-    
-    
+
 
 }

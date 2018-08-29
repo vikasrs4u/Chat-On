@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D10BD1C212E939F006CE76F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D10BD1B212E939F006CE76F /* Message.swift */; };
+		1D4B2C692137599D0095AA27 /* SignUpViewController+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B2C682137599D0095AA27 /* SignUpViewController+Handler.swift */; };
 		1D5CDC5A212B847200BCEF0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5CDC59212B847200BCEF0A /* AppDelegate.swift */; };
 		1D5CDC5C212B847200BCEF0A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5CDC5B212B847200BCEF0A /* WelcomeViewController.swift */; };
 		1D5CDC5F212B847200BCEF0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5CDC5D212B847200BCEF0A /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		1D10BD1B212E939F006CE76F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1D4B2C682137599D0095AA27 /* SignUpViewController+Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+Handler.swift"; sourceTree = "<group>"; };
 		1D5CDC56212B847200BCEF0A /* Chat On.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat On.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5CDC59212B847200BCEF0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D5CDC5B212B847200BCEF0A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				1D9EDE0D212BBCF3003ED9A8 /* SignUpViewController.swift */,
 				1D9EDE0F212BC6E8003ED9A8 /* LoginViewController.swift */,
 				1D9EDE18212BE044003ED9A8 /* ChatViewController.swift */,
+				1D4B2C682137599D0095AA27 /* SignUpViewController+Handler.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				1D9EDE19212BE044003ED9A8 /* ChatViewController.swift in Sources */,
 				1D5CDC5A212B847200BCEF0A /* AppDelegate.swift in Sources */,
 				1D10BD1C212E939F006CE76F /* Message.swift in Sources */,
+				1D4B2C692137599D0095AA27 /* SignUpViewController+Handler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
