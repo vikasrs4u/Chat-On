@@ -242,6 +242,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if(error != nil)
                 {
                     print(error!)
+                    self.messageButtonWidthConstriant.constant = 30
                 }
                 else
                 {
@@ -250,6 +251,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.sendButtonsOutlet.isEnabled = true
                     self.messageTextfields.text = ""
                     self.sendButtonsOutlet.setTitleColor(UIColor.white, for: .normal)
+                    // Once the message is sent, by default send button should not be shown
+                    self.messageButtonWidthConstriant.constant = 0
                 }
             }
         }
