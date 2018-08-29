@@ -174,7 +174,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="400"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6m6-Hs-er5">
-                                        <rect key="frame" x="16" y="132" width="288" height="40"/>
+                                        <rect key="frame" x="16" y="180" width="288" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Ifw-SV-sJi"/>
                                         </constraints>
@@ -183,7 +183,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIa-eO-P3A">
-                                        <rect key="frame" x="16" y="180" width="288" height="40"/>
+                                        <rect key="frame" x="16" y="228" width="288" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="pUf-Vi-av7"/>
                                         </constraints>
@@ -192,7 +192,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngn-1c-AcA">
-                                        <rect key="frame" x="16" y="228" width="288" height="40"/>
+                                        <rect key="frame" x="16" y="276" width="288" height="40"/>
                                         <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="JCt-3G-HxL"/>
@@ -212,21 +212,33 @@
                                             <constraint firstAttribute="width" constant="100" id="T08-47-CuM"/>
                                         </constraints>
                                     </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CbN-Y2-dd2">
+                                        <rect key="frame" x="16" y="132" width="288" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Btj-FX-pOQ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="6m6-Hs-er5" firstAttribute="top" secondItem="Thg-b1-A6x" secondAttribute="bottom" constant="8" id="BDR-g6-HsQ"/>
+                                    <constraint firstItem="CbN-Y2-dd2" firstAttribute="leading" secondItem="1ft-3v-P3q" secondAttribute="leading" constant="16" id="1Wg-E3-vpS"/>
                                     <constraint firstItem="aIa-eO-P3A" firstAttribute="leading" secondItem="1ft-3v-P3q" secondAttribute="leading" constant="16" id="BMC-Ye-miI"/>
                                     <constraint firstItem="6m6-Hs-er5" firstAttribute="leading" secondItem="1ft-3v-P3q" secondAttribute="leading" constant="16" id="HFP-XA-mRo"/>
                                     <constraint firstAttribute="height" constant="400" id="LNy-OL-Icd"/>
                                     <constraint firstItem="aIa-eO-P3A" firstAttribute="top" secondItem="6m6-Hs-er5" secondAttribute="bottom" constant="8" id="MD2-To-djz"/>
-                                    <constraint firstItem="aIa-eO-P3A" firstAttribute="centerY" secondItem="1ft-3v-P3q" secondAttribute="centerY" id="Mdl-i9-u8a"/>
                                     <constraint firstItem="Thg-b1-A6x" firstAttribute="centerX" secondItem="1ft-3v-P3q" secondAttribute="centerX" id="R3b-LW-tT6"/>
                                     <constraint firstItem="Ngn-1c-AcA" firstAttribute="top" secondItem="aIa-eO-P3A" secondAttribute="bottom" constant="8" id="Uot-4y-5gS"/>
                                     <constraint firstAttribute="trailing" secondItem="aIa-eO-P3A" secondAttribute="trailing" constant="16" id="XYw-im-gAa"/>
+                                    <constraint firstItem="6m6-Hs-er5" firstAttribute="top" secondItem="CbN-Y2-dd2" secondAttribute="bottom" constant="8" id="YJP-bz-aHB"/>
                                     <constraint firstAttribute="trailing" secondItem="6m6-Hs-er5" secondAttribute="trailing" constant="16" id="YKi-mw-so0"/>
+                                    <constraint firstItem="CbN-Y2-dd2" firstAttribute="top" secondItem="Thg-b1-A6x" secondAttribute="bottom" constant="8" id="ZWT-uO-8PJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Ngn-1c-AcA" secondAttribute="trailing" constant="16" id="fCN-Qp-JwY"/>
-                                    <constraint firstItem="aIa-eO-P3A" firstAttribute="centerX" secondItem="1ft-3v-P3q" secondAttribute="centerX" id="kFg-8p-34b"/>
                                     <constraint firstItem="Ngn-1c-AcA" firstAttribute="leading" secondItem="1ft-3v-P3q" secondAttribute="leading" constant="16" id="t6N-Wl-ZQW"/>
+                                    <constraint firstItem="6m6-Hs-er5" firstAttribute="centerX" secondItem="1ft-3v-P3q" secondAttribute="centerX" id="vue-Zv-C6z"/>
+                                    <constraint firstAttribute="trailing" secondItem="CbN-Y2-dd2" secondAttribute="trailing" constant="16" id="yZk-Bg-PjD"/>
+                                    <constraint firstItem="6m6-Hs-er5" firstAttribute="centerY" secondItem="1ft-3v-P3q" secondAttribute="centerY" id="zAf-EK-tgc"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -244,6 +256,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="6m6-Hs-er5" id="n1a-Ye-Eo9"/>
+                        <outlet property="nameTextField" destination="CbN-Y2-dd2" id="7KS-xP-MKm"/>
                         <outlet property="passwordTextfield" destination="aIa-eO-P3A" id="l44-CR-PJn"/>
                         <outlet property="signUpImageViewOutlet" destination="Thg-b1-A6x" id="qFR-YN-enb"/>
                         <segue destination="mhq-ae-Wfw" kind="show" identifier="goToChat" id="GgJ-AC-JR7"/>
@@ -251,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5Z-gD-J4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="372"/>
+            <point key="canvasLocation" x="1608.75" y="371.25"/>
         </scene>
         <!--Chat On-->
         <scene sceneID="KhY-Kz-FVD">

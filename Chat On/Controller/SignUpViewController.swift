@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var signUpImageViewOutlet: UIImageView!
     
+    @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -49,9 +50,36 @@ class SignUpViewController: UIViewController
             }
             else
             {
-                SVProgressHUD.showSuccess(withStatus: "Sucessfully Signed Up")
+//                let userUID:String = (Auth.auth().currentUser?.uid)!
+//                let emailID:String = (Auth.auth().currentUser?.email)!
+//                let usersName:String = (Auth.auth().currentUser?.displayName)!
+//
+//                let messageDatabase = Database.database().reference().child("UserProfileInfo")
+//
+//                let messageDictionary = ["email":emailID, "profileImageUrl":"xyz"]
                 
-                self.performSegue(withIdentifier:"goToChat" , sender: self)
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                
+                changeRequest?.displayName = self.nameTextField.text!
+                changeRequest?.commitChanges(completion:
+                    {
+                        error in
+                        
+                        if(error != nil)
+                        {
+                            print(error!)
+                        }
+                        else
+                        {
+                            print("Message Sucessfully saved.")
+                            SVProgressHUD.showSuccess(withStatus: "Sucessfully Signed Up")
+                            
+                            self.performSegue(withIdentifier:"goToChat" , sender: self)
+                            
+                        }
+                
+                    })
+                
             }
             
         }
