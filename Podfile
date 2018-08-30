@@ -14,6 +14,7 @@ pod 'Firebase/Storage'
 pod 'Firebase/Core'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
+pod 'AlamofireImage'
 
 end
 
