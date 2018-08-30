@@ -79,6 +79,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - Alamofire
   - AlamofireImage
   - ChameleonFramework
   - Firebase
@@ -127,6 +128,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 3371a85ec3c1d3935d4e3f160c0f1823277bdde4
+PODFILE CHECKSUM: a2574b0cba32b786690a9229e4126b225c328037
 
 COCOAPODS: 1.5.3
