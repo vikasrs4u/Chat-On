@@ -10,6 +10,8 @@ target 'Chat On' do
 pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'Firebase/Core'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 

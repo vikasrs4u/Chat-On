@@ -10,7 +10,9 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class SignUpViewController: UIViewController
+
+
+class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
 
     @IBOutlet weak var passwordTextfield: UITextField!
@@ -30,6 +32,7 @@ class SignUpViewController: UIViewController
         // This code is to enable signup image and make user select new image from gallery
         signUpImageViewOutlet.isUserInteractionEnabled = true
         signUpImageViewOutlet.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedOnImageView)))
+ 
     }
 
     // MARK: - SignUp
@@ -54,40 +57,100 @@ class SignUpViewController: UIViewController
             }
             else
             {
-//                let userUID:String = (Auth.auth().currentUser?.uid)!
-//                let emailID:String = (Auth.auth().currentUser?.email)!
-//                let usersName:String = (Auth.auth().currentUser?.displayName)!
-//
-//                let messageDatabase = Database.database().reference().child("UserProfileInfo")
-//
-//                let messageDictionary = ["email":emailID, "profileImageUrl":"xyz"]
-                
-                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                
-                changeRequest?.displayName = self.nameTextField.text!
-                changeRequest?.commitChanges(completion:
-                    {
-                        error in
-                        
-                        if(error != nil)
-                        {
-                            print(error!)
-                        }
-                        else
-                        {
-                            print("Message Sucessfully saved.")
-                            SVProgressHUD.showSuccess(withStatus: "Sucessfully Signed Up")
-                            
-                            self.performSegue(withIdentifier:"goToChat" , sender: self)
-                            
-                        }
-                
-                    })
-                
+                self.profileImageUpload()
+            
             }
             
         }
     }
 
+    func profileImageUpload()
+    {
+        let userUID:String = (Auth.auth().currentUser?.uid)!
+
+        let storageRef = Storage.storage().reference().child("\(userUID)\(".png")")
+        
+        // Image uploaded to firebase must be Data and not UIImage, so below changes are made
+        
+        if let uploadImage = UIImagePNGRepresentation(signUpImageViewOutlet.image!)
+        {
+            storageRef.putData(uploadImage, metadata: nil)
+            { (metadata, error)in
+            
+                if(error != nil)
+                {
+                    SVProgressHUD.showError(withStatus:"Profile Image Upload was not successful!!!")
+                }
+                else
+                {
+                  storageRef.downloadURL(completion:
+                    {(url, error) in
+                        if (error == nil)
+                        {
+                            let downloadImageUrlString:String = (url?.absoluteString)!
+                            self.profileInformationStorage(downloadImageUrl:downloadImageUrlString)
+                            self.profileModification(downloadUrl: downloadImageUrlString)
+                            return
+                        }
+                    })
+
+                }
+                
+            }
+        }
+    }
+    
+    
+    func profileInformationStorage(downloadImageUrl:String)
+    {
+        let userUID:String = (Auth.auth().currentUser?.uid)!
+        let emailID:String = (Auth.auth().currentUser?.email)!
+        let usersName:String = self.nameTextField.text!
+        
+        let userProfileDatabase = Database.database().reference().child("UserProfileInfo").child(userUID)
+        let userProfileDictionary = ["Name":usersName,"email":emailID, "profileImageUrl":downloadImageUrl]
+        
+        userProfileDatabase.setValue(userProfileDictionary)
+        {
+            (error,reference ) in
+            
+            if(error != nil)
+            {
+                SVProgressHUD.showError(withStatus:"Error while storing user info")
+            }
+            else
+            {
+                return
+            }
+            
+        }
+    }
+    
+    // Once signup is successful this method is called to update the name and
+    func profileModification(downloadUrl:String)
+    {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        
+        changeRequest?.displayName = self.nameTextField.text!
+        changeRequest?.photoURL = URL(fileURLWithPath: downloadUrl)
+        changeRequest?.commitChanges(completion:
+            {
+                error in
+                
+                if(error != nil)
+                {
+                    print(error!)
+                }
+                else
+                {
+                    print("Message Sucessfully saved.")
+                    SVProgressHUD.showSuccess(withStatus: "Sucessfully Signed Up")
+                    
+                    self.performSegue(withIdentifier:"goToChat" , sender: self)
+                    
+                }
+                
+        })
+    }
 
 }
