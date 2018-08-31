@@ -11,6 +11,7 @@ import Firebase
 import SVProgressHUD
 import ChameleonFramework
 import AlamofireImage
+import Alamofire
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate
 {
@@ -72,9 +73,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
         navigationBarOutlet.hidesBackButton = true
         
-        if(Auth.auth().currentUser?.email == "vshetty@scu.edu")
+        if(Auth.auth().currentUser?.photoURL != nil)
         {
-           navigationProfileImageOutlet.image  = UIImage(named: "Vikas")
+            let theURL = NSURL(string:(Auth.auth().currentUser?.photoURL?.absoluteString)!)
+            navigationProfileImageOutlet.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
+            
+            navigationProfileImageOutlet.backgroundColor = UIColor.flatSkyBlue()
         }
         else
         {
@@ -320,19 +324,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.endEditing(true)
     }
     
-    func downloadImageFromFirebase()
-    {
-        Alamofire.request("https://httpbin.org/image/png").responseImage { response in
-            debugPrint(response)
-            
-            print(response.request)
-            print(response.response)
-            debugPrint(response.result)
-            
-            if let image = response.result.value {
-                print("image downloaded: \(image)")
-            }
-        }
-    }
-    
 }
+    
+

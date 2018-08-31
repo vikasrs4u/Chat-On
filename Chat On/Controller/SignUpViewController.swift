@@ -132,7 +132,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UI
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         
         changeRequest?.displayName = self.nameTextField.text!
-        changeRequest?.photoURL = URL(fileURLWithPath: downloadUrl)
+        changeRequest?.photoURL = URL(string: downloadUrl)
         changeRequest?.commitChanges(completion:
             {
                 error in
