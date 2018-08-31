@@ -32,6 +32,10 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UI
         // This code is to enable signup image and make user select new image from gallery
         signUpImageViewOutlet.isUserInteractionEnabled = true
         signUpImageViewOutlet.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedOnImageView)))
+        
+        //Below is the code added to dismiss the keyboard.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
  
     }
 
@@ -151,6 +155,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UI
                 }
                 
         })
+    }
+    
+    // Method to dismiss the keyboard
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
 
 }

@@ -20,6 +20,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //Below is the code added to dismiss the keyboard.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
 
     }
 
@@ -43,6 +46,12 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier:"goToChat", sender: self)
             }
         }
+    }
+    
+    // Method to dismiss the keyboard
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
     
 
