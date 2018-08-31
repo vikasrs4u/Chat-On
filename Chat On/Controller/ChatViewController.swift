@@ -123,9 +123,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 // Below code is to redraw the layout again to update to new constraint
                 self.view.layoutIfNeeded()
                 
-                let indexPath = IndexPath(row: self.messageArray.count-1, section: 0);
-                self.messageTableViews.scrollToRow(at: indexPath, at:.bottom, animated: false)
-                
+                if (self.messageArray.count > 0)
+                {
+                    let indexPath = IndexPath(row: self.messageArray.count-1, section: 0);
+                    self.messageTableViews.scrollToRow(at: indexPath, at:.bottom, animated: false)
+                }
             }
         }
     }
@@ -144,7 +146,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell") as! CustomMessageCell
         
         cell.messageBody.text = messageArray[indexPath.row].messageBody
-        cell.senderUsername.text = messageArray[indexPath.row].sender
+        cell.senderUsername.text = messageArray[indexPath.row].name
         cell.avatarImageView.image = UIImage(named: "Default Avatar Image")
         
         // To make the image avatars to be rounded
@@ -158,19 +160,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if(messageArray[indexPath.row].sender == Auth.auth().currentUser?.email)
         {
+            let theURL = NSURL(string:(Auth.auth().currentUser?.photoURL?.absoluteString)!)
+            
+            cell.avatarImageView.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
+            
             cell.avatarImageView.backgroundColor = UIColor.flatSkyBlue()
+            
             cell.messageBackground.backgroundColor = UIColor.flatMint()
 
         }
         else
         {
+            let theURL = NSURL(string:messageArray[indexPath.row].profileImageOfSender)
+            
+            cell.avatarImageView.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
+            
             cell.avatarImageView.backgroundColor = UIColor.flatPlum()
             cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
-        }
-        
-        if(messageArray[indexPath.row].sender == "vshetty@scu.edu")
-        {
-            cell.avatarImageView.image = UIImage(named: "Vikas")
         }
 
         return cell
@@ -239,7 +245,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             let messageDatabase = Database.database().reference().child("Messages")
             
             let messageDictionary = ["Sender":Auth.auth().currentUser?.email,
-                                     "MessageBody": messageTextfields.text!]
+                                     "MessageBody": messageTextfields.text!,
+                                     "ProfileImageOfSender":Auth.auth().currentUser?.photoURL?.absoluteString,
+                                     "Name":Auth.auth().currentUser?.displayName]
             
             messageDatabase.childByAutoId().setValue(messageDictionary)
             {  (error,reference) in
@@ -283,6 +291,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             message.messageBody = snapshotValue["MessageBody"]!
             
             message.sender = snapshotValue["Sender"]!
+            
+            message.profileImageOfSender = snapshotValue["ProfileImageOfSender"]!
+            
+            message.name = snapshotValue["Name"]!
             
             self.messageArray.append(message)
             

@@ -10,4 +10,6 @@ class Message
 {
     var sender : String = ""
     var messageBody : String = ""
+    var profileImageOfSender : String = ""
+    var name: String = ""
 }
