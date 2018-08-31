@@ -11,7 +11,8 @@ import Firebase
 
 class WelcomeViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         // Below code is added to keep user logged in even when user quits the app. 
@@ -30,16 +31,6 @@ class WelcomeViewController: UIViewController {
         
 
     }
-
-    override func viewWillAppear(_ animated: Bool)
-    {
-
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

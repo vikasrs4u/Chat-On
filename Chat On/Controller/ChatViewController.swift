@@ -274,7 +274,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    //Method to retrive the data
+    //Method to retrive the data from Firebase database
     
     func retriveMessageDataFromDatabase()
     {
