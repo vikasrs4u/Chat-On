@@ -18,6 +18,9 @@ PODS:
   - Firebase/Database (5.7.0):
     - Firebase/CoreOnly
     - FirebaseDatabase (= 5.0.2)
+  - Firebase/Messaging (5.7.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.1.1)
   - Firebase/Storage (5.7.0):
     - Firebase/CoreOnly
     - FirebaseStorage (= 3.0.1)
@@ -44,6 +47,11 @@ PODS:
   - FirebaseInstanceID (3.2.1):
     - FirebaseCore (~> 5.1)
     - GoogleUtilities/Environment (~> 5.2)
+  - FirebaseMessaging (3.1.1):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleUtilities/Reachability (~> 5.2)
+    - Protobuf (~> 3.1)
   - FirebaseStorage (3.0.1):
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
@@ -76,6 +84,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Protobuf (3.6.1)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
@@ -86,6 +95,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Messaging
   - Firebase/Storage
   - SVProgressHUD
 
@@ -101,12 +111,14 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
+    - FirebaseMessaging
     - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - Protobuf
     - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -120,14 +132,16 @@ SPEC CHECKSUMS:
   FirebaseCore: 3a97432acb324b439fbed338e642f9cbb516a63d
   FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
   FirebaseInstanceID: ea5af6920d0a4a29b40459d055bebe4a6c1333c4
+  FirebaseMessaging: 698c94dd1e3436346c29bb9c85dcdca4c4a0c30b
   FirebaseStorage: 43f823b96b72a08539eba21a7de043348a69d4c6
   GoogleAppMeasurement: f7507b39b70ad0bd80b3d81518b2f43868974307
   GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: a2574b0cba32b786690a9229e4126b225c328037
+PODFILE CHECKSUM: 7ffe65705d2bd6660fbbe32b8f24f88e1979eb7d
 
 COCOAPODS: 1.5.3

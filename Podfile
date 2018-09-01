@@ -16,6 +16,7 @@ pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'AlamofireImage'
 pod 'Alamofire'
+pod 'Firebase/Messaging'
 
 end
 
