@@ -44,7 +44,8 @@ class LoginViewController: UIViewController {
             {
                 let fcmTokenValue:String = String(Messaging.messaging().fcmToken!)
                 self.updateUserInfo(token: fcmTokenValue)
-                
+                // we need to register on login 
+                UIApplication.shared.registerForRemoteNotifications()
                 SVProgressHUD.showSuccess(withStatus: "Sucessfully Logged In")
                 self.performSegue(withIdentifier:"goToChat", sender: self)
             }

@@ -200,6 +200,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             try Auth.auth().signOut()
             
+            // When user logs out we need to degrisgter him to all types of notifications
+            
+            UIApplication.shared.unregisterForRemoteNotifications()
+            
             // To take user back to rootview i.e the first screen of our app.
             
             SVProgressHUD.showSuccess(withStatus: "Sucessfully Logged out")

@@ -152,7 +152,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UI
                     self.postTheTokenToFireBaseDB(token: fcmTokenValue)
                     print("Message Sucessfully saved.")
                     SVProgressHUD.showSuccess(withStatus: "Sucessfully Signed Up")
-                    
+                    // we need to register on signup
+                    UIApplication.shared.registerForRemoteNotifications()
                     self.performSegue(withIdentifier:"goToChat" , sender: self)
                     
                 }
