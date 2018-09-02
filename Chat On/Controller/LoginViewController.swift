@@ -59,9 +59,13 @@ class LoginViewController: UIViewController {
     
     func updateUserInfo(token:String)
     {
-        let VC:SignUpViewController = SignUpViewController()
-        
-        VC.postTheTokenToFireBaseDB(token:token)
+        if (token.count != 0)
+        {
+            let VC:SignUpViewController = SignUpViewController()
+            
+            VC.postTheTokenToFireBaseDB(token:token)
+        }
+
     }
     
 

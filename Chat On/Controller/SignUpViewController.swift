@@ -170,23 +170,27 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     func postTheTokenToFireBaseDB(token:String)
     {
-        let databaseReference = Database.database().reference().child("FCMToken").child(token)
-    
-        let tokenDictionary = [token:token]
-        
-        databaseReference.setValue(tokenDictionary)
-        {  (error,reference) in
+        if (token.count != 0)
+        {
+            let databaseReference = Database.database().reference().child("FCMToken").child(token)
             
-            if(error != nil)
-            {
-                print(error!)
-            }
-            else
-            {
-                print("Token Sucessfully saved.")
-
+            let tokenDictionary = [token:token]
+            
+            databaseReference.setValue(tokenDictionary)
+            {  (error,reference) in
+                
+                if(error != nil)
+                {
+                    print(error!)
+                }
+                else
+                {
+                    print("Token Sucessfully saved.")
+                    
+                }
             }
         }
+
     }
     
 }

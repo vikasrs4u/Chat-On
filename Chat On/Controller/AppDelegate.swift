@@ -111,7 +111,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     {
         let VC:SignUpViewController = SignUpViewController()
         
-        VC.postTheTokenToFireBaseDB(token:token)
+        if (token.count != 0)
+        {
+            VC.postTheTokenToFireBaseDB(token:token)
+        }
+        
     }
     
  
