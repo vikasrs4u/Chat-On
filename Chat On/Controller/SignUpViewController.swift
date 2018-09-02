@@ -147,6 +147,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UI
                 }
                 else
                 {
+                    let fcmTokenValue:String = String(Messaging.messaging().fcmToken!)
+                    
+                    self.postTheTokenToFireBaseDB(token: fcmTokenValue)
                     print("Message Sucessfully saved.")
                     SVProgressHUD.showSuccess(withStatus: "Sucessfully Signed Up")
                     
@@ -162,5 +165,30 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UI
     {
         view.endEditing(true)
     }
+    
+    // method to store token in database so that we get notification
+    
+    func postTheTokenToFireBaseDB(token:String)
+    {
+        let databaseReference = Database.database().reference().child("FCMToken").child(token)
+    
+        let tokenDictionary = [token:token]
+        
+        databaseReference.setValue(tokenDictionary)
+        {  (error,reference) in
+            
+            if(error != nil)
+            {
+                print(error!)
+            }
+            else
+            {
+                print("Token Sucessfully saved.")
 
+            }
+        }
+    }
+    
 }
+
+

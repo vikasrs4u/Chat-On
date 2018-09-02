@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     {
         // Method to request for users notification
         
+        NotificationCenter.default.addObserver(self, selector:
+            #selector(tokenRefreshNotification), name:
+            NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound])
         { (isGranted, error) in
             
@@ -83,6 +87,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    @objc  func tokenRefreshNotification(_ notification: Notification)
+    {
+        var tokenStringValue:String = ""
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Error fetching remote instange ID: \(error)")
+            } else if let result = result {
+                
+                tokenStringValue = result.token
+                print("Remote instance ID token: \(result.token)")
+            }
+        }
+        
+        // Connect to FCM since connection may have failed when attempted before having a token.
+        connectToFirebaseMessgaingService()
+        updateUserInfo(token: tokenStringValue)
+        
+    }
+    
+    func updateUserInfo(token:String)
+    {
+        let VC:SignUpViewController = SignUpViewController()
+        
+        VC.postTheTokenToFireBaseDB(token:token)
+    }
+    
+ 
+    //Registration tokens are delivered via the method messaging:didReceiveRegistrationToken:. This method is called generally once per app start with an FCM token. When this method is called, it is the ideal time to:
+    
+//   1  If the registration token is new, send it to your application server.
+//    2 Subscribe the registration token to topics. This is required only for new subscriptions or for situations where the user has re-installed the app.
+
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String)
+    {
+    
+        updateUserInfo(token:fcmToken)
+
+    }
+
 
 }
 

@@ -42,6 +42,9 @@ class LoginViewController: UIViewController {
             }
             else
             {
+                let fcmTokenValue:String = String(Messaging.messaging().fcmToken!)
+                self.updateUserInfo(token: fcmTokenValue)
+                
                 SVProgressHUD.showSuccess(withStatus: "Sucessfully Logged In")
                 self.performSegue(withIdentifier:"goToChat", sender: self)
             }
@@ -52,6 +55,13 @@ class LoginViewController: UIViewController {
     @objc func dismissKeyboard()
     {
         view.endEditing(true)
+    }
+    
+    func updateUserInfo(token:String)
+    {
+        let VC:SignUpViewController = SignUpViewController()
+        
+        VC.postTheTokenToFireBaseDB(token:token)
     }
     
 
