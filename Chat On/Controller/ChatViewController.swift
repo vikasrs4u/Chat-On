@@ -365,6 +365,23 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageTextfields.leftViewMode = UITextFieldViewMode.always
     }
     
+    //Method to draw button inside the textfield
+    //    func setupUI()
+    //    {
+    //        let button = UIButton(type:.custom)
+    //        button.setTitle("↑", for:.normal)
+    //        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+    //
+    //        button.backgroundColor = UIColor(hexString:"2969D2")
+    //        button.setTitleColor(UIColor.white, for:.normal)
+    //        button.frame = CGRect(x: 0, y: 0, width: CGFloat(25), height: CGFloat(25))
+    //        button.layer.cornerRadius = button.frame.size.height / 2
+    //        button.layer.masksToBounds = true
+    //        //button.addTarget(self, action: #selector(self.refresh), for: .touchUpInside)
+    //        messageTextfields.rightView = button
+    //        messageTextfields.rightViewMode = .never
+    //    }
+    
 }
 
 
