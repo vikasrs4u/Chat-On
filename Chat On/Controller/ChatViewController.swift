@@ -89,9 +89,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         navigationProfileImageOutlet.layer.cornerRadius = 20
         navigationProfileImageOutlet.layer.masksToBounds = true
-
-        messageTextfields.layer.cornerRadius = 20
-        messageTextfields.layer.masksToBounds = true
+        
+        roundingTheTextField()
         
         sendButtonsOutlet.layer.cornerRadius = 20
         sendButtonsOutlet.layer.masksToBounds = true
@@ -154,9 +153,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.avatarImageView.layer.masksToBounds = true
         
         // To make the message cell have rounded corners
-        cell.messageBackground.layer.cornerRadius = 20;
-        cell.messageBackground.layer.masksToBounds = true;
-        
+        cell.messageBackground.layer.cornerRadius = 20
+        cell.messageBackground.layer.masksToBounds = true
         
         if(messageArray[indexPath.row].sender == Auth.auth().currentUser?.email)
         {
@@ -227,7 +225,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         UIView.animate(withDuration: 0.3)
         {
-            self.heightConstraints.constant = 45
+            self.heightConstraints.constant = 42
             // Below code is to redraw the layout again to update to new constraint
             self.view.layoutIfNeeded()
             self.isKeyBoardCurrentlyShown = false
@@ -340,6 +338,33 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.endEditing(true)
     }
     
-}
     
+    //Method to round the message textField
+    func roundingTheTextField()
+    {
+        //Basic texfield Setup
+        messageTextfields.borderStyle = .none
+        messageTextfields.backgroundColor = UIColor.white
+        
+        //To apply corner radius
+        messageTextfields.layer.cornerRadius = messageTextfields.frame.size.height / 2
+        
+        //To apply border
+        messageTextfields.layer.borderWidth = 0.25
+        messageTextfields.layer.borderColor = UIColor.white.cgColor
+        
+        //To apply Shadow
+        messageTextfields.layer.shadowOpacity = 1
+        messageTextfields.layer.shadowRadius = 1.2
+        messageTextfields.layer.shadowOffset = CGSize.zero // Use any CGSize
+        messageTextfields.layer.shadowColor = UIColor.gray.cgColor
+        
+        //To apply padding
+        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: messageTextfields.frame.height))
+        messageTextfields.leftView = paddingView
+        messageTextfields.leftViewMode = UITextFieldViewMode.always
+    }
+    
+}
+
 
