@@ -101,6 +101,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // nofification to check if message textfield has some data change or not. 
         NotificationCenter.default.addObserver(self, selector: #selector(changeSendButtonColor), name: .UITextFieldTextDidChange, object: nil)
         
+        //Whenever the chats orientation changes we need to dismiss the keyboard
+        NotificationCenter.default.addObserver(self, selector: #selector(dismissKeyboard), name:  Notification.Name("UIDeviceOrientationDidChangeNotification"), object: nil)
+
+        
 
     }
     
@@ -176,6 +180,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.avatarImageView.backgroundColor = UIColor.flatPlum()
             cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
         }
+        
+       
+        cell.avatarImageView.layer.borderWidth = 1.0
+        cell.avatarImageView.layer.borderColor = UIColor.white.cgColor
 
         return cell
         
