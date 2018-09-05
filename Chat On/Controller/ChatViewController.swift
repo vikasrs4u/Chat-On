@@ -103,6 +103,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //Whenever the chats orientation changes we need to dismiss the keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(dismissKeyboard), name:  Notification.Name("UIDeviceOrientationDidChangeNotification"), object: nil)
+        
+       
+        // On click of profile image, we will be opening profile image view
+       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.imageTapped(gesture:)))
+        // add it to the image view;
+        navigationProfileImageOutlet.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        navigationProfileImageOutlet.isUserInteractionEnabled = true
 
         
 
@@ -321,6 +329,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    
+    //Method to retrive Online information
+    
+    func retriveOnlineInfoFromDatabase()
+    {
+        
+    }
+    
     // Method to show or hide the send button and also to make send button a circle
     @objc func changeSendButtonColor()
     {
@@ -372,6 +388,25 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageTextfields.leftView = paddingView
         messageTextfields.leftViewMode = UITextFieldViewMode.always
     }
+    
+    @IBAction func onClickOfProfileImage(_ sender: UIBarButtonItem)
+    {
+        self.performSegue(withIdentifier:"goToProfileImage" , sender: self)
+    }
+    
+    
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        
+        if (gesture.view as? UIImageView) != nil
+        {
+            print("Image Tapped")
+            self.performSegue(withIdentifier:"goToProfileImage" , sender: self)
+            
+        }
+    }
+    
+    
     
     //Method to draw button inside the textfield
     //    func setupUI()

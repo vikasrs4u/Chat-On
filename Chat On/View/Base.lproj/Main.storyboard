@@ -315,7 +315,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="664"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="6Zv-tV-cyz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="6Zv-tV-cyz">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Zv-tV-cyz" id="h6d-In-G9U">
@@ -340,12 +340,12 @@
                         <viewLayoutGuide key="safeArea" id="UbV-PY-YAf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat On" id="P75-l2-mgv">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Is6-2H-TbS">
+                        <barButtonItem key="leftBarButtonItem" title="   " style="plain" id="Is6-2H-TbS">
                             <view key="customView" contentMode="scaleToFill" id="sRl-uC-ZPU">
                                 <rect key="frame" x="16" y="2" width="46" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWG-3e-lUP">
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWG-3e-lUP">
                                         <rect key="frame" x="-16" y="0.0" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -367,11 +367,43 @@
                         <outlet property="navigationBarOutlet" destination="P75-l2-mgv" id="9CE-wc-n9r"/>
                         <outlet property="navigationProfileImageOutlet" destination="SWG-3e-lUP" id="pMS-cy-oge"/>
                         <outlet property="sendButtonsOutlet" destination="4Io-im-CtZ" id="ye6-4K-MdQ"/>
+                        <segue destination="a3n-nS-Vge" kind="show" identifier="goToProfileImage" id="rQD-h4-lIY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gN1-V1-20n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2528.8000000000002" y="-580.04926108374389"/>
+        </scene>
+        <!--Profile Image-->
+        <scene sceneID="o2D-Jb-TEo">
+            <objects>
+                <viewController title="Profile Image" id="a3n-nS-Vge" customClass="ProfileImageViewController" customModule="Chat_On" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AwF-n2-vsG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UCO-Og-wAW">
+                                <rect key="frame" x="12.666666666666657" y="231" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="WCG-Ig-bS4"/>
+                                    <constraint firstAttribute="width" constant="350" id="xMe-SD-gaK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UCO-Og-wAW" firstAttribute="centerY" secondItem="AwF-n2-vsG" secondAttribute="centerY" id="eRr-uR-wxc"/>
+                            <constraint firstItem="UCO-Og-wAW" firstAttribute="centerX" secondItem="AwF-n2-vsG" secondAttribute="centerX" id="sxH-XQ-M9d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gVt-Ke-Fyp"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileImageOutlet" destination="UCO-Og-wAW" id="12B-8Q-rLN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6Q-VJ-HtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3340" y="-963.86806596701661"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iAs-CN-ID7">
@@ -397,6 +429,6 @@
         <image name="SignUp" width="653" height="1344"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GgJ-AC-JR7"/>
+        <segue reference="Igi-Cr-JOJ"/>
     </inferredMetricsTieBreakers>
 </document>

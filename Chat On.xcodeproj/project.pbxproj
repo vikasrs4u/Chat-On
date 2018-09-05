@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0161E8214080C900737A30 /* ProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0161E7214080C900737A30 /* ProfileImageViewController.swift */; };
 		1D10BD1C212E939F006CE76F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D10BD1B212E939F006CE76F /* Message.swift */; };
 		1D4B2C692137599D0095AA27 /* SignUpViewController+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B2C682137599D0095AA27 /* SignUpViewController+Handler.swift */; };
 		1D5CDC5A212B847200BCEF0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5CDC59212B847200BCEF0A /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D0161E7214080C900737A30 /* ProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewController.swift; sourceTree = "<group>"; };
 		1D10BD1B212E939F006CE76F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1D4B2C682137599D0095AA27 /* SignUpViewController+Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+Handler.swift"; sourceTree = "<group>"; };
 		1D5CDC56212B847200BCEF0A /* Chat On.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat On.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				1D9EDE0F212BC6E8003ED9A8 /* LoginViewController.swift */,
 				1D9EDE18212BE044003ED9A8 /* ChatViewController.swift */,
 				1D4B2C682137599D0095AA27 /* SignUpViewController+Handler.swift */,
+				1D0161E7214080C900737A30 /* ProfileImageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0161E8214080C900737A30 /* ProfileImageViewController.swift in Sources */,
 				1D9EDE10212BC6E8003ED9A8 /* LoginViewController.swift in Sources */,
 				1D9EDE17212BD9CC003ED9A8 /* CustomMessageCell.swift in Sources */,
 				1D9EDE0E212BBCF3003ED9A8 /* SignUpViewController.swift in Sources */,
