@@ -389,12 +389,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageTextfields.leftViewMode = UITextFieldViewMode.always
     }
     
-    @IBAction func onClickOfProfileImage(_ sender: UIBarButtonItem)
-    {
-        self.performSegue(withIdentifier:"goToProfileImage" , sender: self)
-    }
-    
-    
+
     @objc func imageTapped(gesture: UIGestureRecognizer) {
         // if the tapped view is a UIImageView then set it to imageview
         
