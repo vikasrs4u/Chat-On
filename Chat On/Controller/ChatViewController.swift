@@ -21,6 +21,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var isKeyBoardCurrentlyShown = false
     
+    var counter:Int = 0
+    
     @IBOutlet weak var tableViewHeightConstriant: NSLayoutConstraint!
     @IBOutlet weak var messageTableViews: UITableView!
     
@@ -75,6 +77,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if(Auth.auth().currentUser?.photoURL != nil)
         {
+            
             let theURL = NSURL(string:(Auth.auth().currentUser?.photoURL?.absoluteString)!)
             navigationProfileImageOutlet.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
             
@@ -172,11 +175,28 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             let theURL = NSURL(string:(Auth.auth().currentUser?.photoURL?.absoluteString)!)
             
-            cell.avatarImageView.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
+            if (counter == 0)
+            {
+                let URL = NSURL(string: (Auth.auth().currentUser?.photoURL?.absoluteString)!)
+                let mURLRequest = NSURLRequest(url: URL! as URL)
+                let urlRequest = URLRequest(url: URL! as URL, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData)
+                
+                let imageDownloader = UIImageView.af_sharedImageDownloader
+                _ = imageDownloader.imageCache?.removeImage(for: mURLRequest as URLRequest, withIdentifier: nil)
+                cell.avatarImageView.af_setImage(withURLRequest: urlRequest, placeholderImage: UIImage(named: "placeholder"), completion: { (response) in
+                    cell.avatarImageView.image = response.result.value
+                })
+            }
+            else
+            {
+                cell.avatarImageView.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
+                
+                cell.avatarImageView.backgroundColor = UIColor.flatSkyBlue()
+                
+                cell.messageBackground.backgroundColor = UIColor.flatMint()
+            }
             
-            cell.avatarImageView.backgroundColor = UIColor.flatSkyBlue()
-            
-            cell.messageBackground.backgroundColor = UIColor.flatMint()
+
 
         }
         else
@@ -192,6 +212,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
        
         cell.avatarImageView.layer.borderWidth = 1.0
         cell.avatarImageView.layer.borderColor = UIColor.white.cgColor
+        
+        if (indexPath.row == messageArray.count - 1)
+        {
+            counter = counter + 1;
+        }
 
         return cell
         
@@ -401,7 +426,25 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        messageTableViews.reloadData()
+        
+        if(Auth.auth().currentUser?.photoURL != nil)
+        {
+            let theURL = NSURL(string:(Auth.auth().currentUser?.photoURL?.absoluteString)!)
+            navigationProfileImageOutlet.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
+            
+            navigationProfileImageOutlet.backgroundColor = UIColor.flatSkyBlue()
+        }
+        else
+        {
+            navigationProfileImageOutlet.image  = UIImage(named: "Default Avatar Image")
+            navigationProfileImageOutlet.backgroundColor = UIColor.flatSkyBlue()
+            
+        }
+        
+    }
     
     //Method to draw button inside the textfield
     //    func setupUI()

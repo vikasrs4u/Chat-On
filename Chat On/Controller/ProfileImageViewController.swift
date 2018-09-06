@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import AlamofireImage
 
-class ProfileImageViewController: UIViewController {
+class ProfileImageViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     
     @IBOutlet weak var profileImageOutlet: UIImageView!
@@ -40,10 +40,18 @@ class ProfileImageViewController: UIViewController {
         profileImageOutlet.layer.borderColor = UIColor.white.cgColor
         profileImageOutlet.layer.borderWidth = 2.0
         
+
+        
     }
 
+
+    @IBAction func editProfileImage(_ sender: UIBarButtonItem)
+    {
+        // This code is to enable Profile image and make user select new image from gallery
+        
+       editProfileImageClicked()
+    }
     
-
-
+    
 
 }
