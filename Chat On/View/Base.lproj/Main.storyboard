@@ -283,7 +283,7 @@
                                             <constraint firstAttribute="height" constant="30" id="BmR-Gs-CrN"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Io-im-CtZ">
@@ -327,7 +327,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="fC2-W9-TWa" secondAttribute="bottom" constant="10" id="BG7-WV-e3h"/>
                             <constraint firstItem="fC2-W9-TWa" firstAttribute="trailing" secondItem="UbV-PY-YAf" secondAttribute="trailing" id="Smy-ma-9oi"/>
@@ -390,7 +390,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UCO-Og-wAW" firstAttribute="centerY" secondItem="AwF-n2-vsG" secondAttribute="centerY" id="eRr-uR-wxc"/>
                             <constraint firstItem="UCO-Og-wAW" firstAttribute="centerX" secondItem="AwF-n2-vsG" secondAttribute="centerX" id="sxH-XQ-M9d"/>

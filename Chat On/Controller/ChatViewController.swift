@@ -42,6 +42,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        messageTableViews.backgroundView = UIImageView(image: UIImage(named:"Message Background"))
 
         // Since we have table view, we need to regsiter our class as delegate and data source for the table view
         
@@ -115,7 +116,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // make sure imageView can be interacted with by user
         navigationProfileImageOutlet.isUserInteractionEnabled = true
 
-        
+
 
     }
     
@@ -191,10 +192,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             {
                 cell.avatarImageView.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
                 
-                cell.avatarImageView.backgroundColor = UIColor.flatSkyBlue()
-                
-                cell.messageBackground.backgroundColor = UIColor.flatMint()
+
             }
+            
+            
+            cell.avatarImageView.backgroundColor = UIColor.flatSkyBlue()
+            cell.messageBackground.backgroundColor = UIColor(hexString:"DCF8C6")
+            cell.senderUsername.textColor = UIColor.flatOrange()
             
 
 
@@ -206,17 +210,19 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.avatarImageView.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
             
             cell.avatarImageView.backgroundColor = UIColor.flatPlum()
-            cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
+            cell.messageBackground.backgroundColor = UIColor.flatWhite()
+            cell.senderUsername.textColor = UIColor.flatBlue()
         }
         
        
-        cell.avatarImageView.layer.borderWidth = 1.0
         cell.avatarImageView.layer.borderColor = UIColor.white.cgColor
         
         if (indexPath.row == messageArray.count - 1)
         {
             counter = counter + 1;
         }
+
+        cell.backgroundView = UIImageView(image: UIImage(named:"Message Background"))
 
         return cell
         
