@@ -17,7 +17,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 {
     var messageArray:[Message] = [Message]()
     
-    var keyboardHeight:CGFloat = 256
+    var keyboardHeight:CGFloat = 200
     
     var isKeyBoardCurrentlyShown = false
     
@@ -105,10 +105,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // nofification to check if message textfield has some data change or not. 
         NotificationCenter.default.addObserver(self, selector: #selector(changeSendButtonColor), name: .UITextFieldTextDidChange, object: nil)
         
-        //Whenever the chats orientation changes we need to dismiss the keyboard
-        NotificationCenter.default.addObserver(self, selector: #selector(dismissKeyboard), name:  Notification.Name("UIDeviceOrientationDidChangeNotification"), object: nil)
-        
-       
         // On click of profile image, we will be opening profile image view
        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.imageTapped(gesture:)))
         // add it to the image view;
@@ -123,8 +119,17 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         {
-            keyboardHeight = keyboardSize.height
-            print(keyboardHeight)
+            let orientation = UIApplication.shared.statusBarOrientation
+            
+            // Keyboard height should be set based on orientation
+            if(!UIInterfaceOrientationIsPortrait(orientation) && (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1))
+            {
+               keyboardHeight = keyboardSize.width
+            }
+            else
+            {
+                keyboardHeight = keyboardSize.height
+            }
             
             UIView.animate(withDuration: 0.3)
             {
@@ -132,6 +137,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 {
                   self.heightConstraints.constant = self.heightConstraints.constant + self.keyboardHeight
                   self.isKeyBoardCurrentlyShown = true
+                }
+                else
+                {
+                    //Code added for orientation change handling when keyboard is shown
+                    self.heightConstraints.constant = 42 + self.keyboardHeight
                 }
                 
                 
@@ -451,6 +461,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
+    
+    
+
     
     //Method to draw button inside the textfield
     //    func setupUI()
