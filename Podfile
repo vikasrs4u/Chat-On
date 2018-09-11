@@ -18,7 +18,13 @@ pod 'AlamofireImage'
 pod 'Alamofire'
 pod 'Firebase/Messaging'
 
+target 'Chat On Notification Content Extension' do
+    pod 'AlamofireImage'
 end
+
+end
+
+
 
 
 post_install do |installer|

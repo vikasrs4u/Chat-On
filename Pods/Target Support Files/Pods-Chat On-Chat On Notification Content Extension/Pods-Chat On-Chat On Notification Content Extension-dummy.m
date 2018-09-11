@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Chat_On_Chat_On_Notification_Content_Extension : NSObject
+@end
+@implementation PodsDummy_Pods_Chat_On_Chat_On_Notification_Content_Extension
+@end
