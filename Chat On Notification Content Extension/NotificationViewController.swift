@@ -10,15 +10,19 @@ import UIKit
 import UserNotifications
 import UserNotificationsUI
 import AlamofireImage
+import ChameleonFramework
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
- 
+    @IBOutlet weak var nameLabelOutlet: UILabel!
+    
     @IBOutlet weak var usersName: UILabel!
     
     @IBOutlet weak var messageBody: UILabel!
     
     @IBOutlet weak var usersProfileImage: UIImageView!
+    
+    @IBOutlet weak var containerView: UIView!
     
     override func viewDidLoad()
     {
@@ -30,6 +34,11 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         
         self.usersProfileImage.layer.borderWidth = 0.25
         self.usersProfileImage.layer.borderColor = UIColor.black.cgColor
+        self.containerView.backgroundColor = UIColor.flatWhite()
+        self.containerView.layer.cornerRadius = 20
+        self.containerView.layer.masksToBounds = true
+        self.nameLabelOutlet.textColor = UIColor.flatBlue()
+        
     }
     
     func didReceive(_ notification: UNNotification)

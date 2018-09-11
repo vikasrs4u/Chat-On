@@ -15,55 +15,62 @@
             <objects>
                 <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="Chat_On_Notification_Content_Extension" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42" userLabel="User Name">
-                                <rect key="frame" x="74" y="0.0" width="246" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="tCu-c2-LPb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkQ-Ad-DlG" userLabel="Message Body">
-                                <rect key="frame" x="74" y="30" width="246" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Rad-Wi-vHL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3FY-RR-SXD">
-                                <rect key="frame" x="16" y="15" width="50" height="50"/>
+                                <rect key="frame" x="8" y="8" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hIL-ze-HQv"/>
-                                    <constraint firstAttribute="width" constant="50" id="ygT-z7-VG3"/>
+                                    <constraint firstAttribute="height" constant="50" id="H0j-GX-p7P"/>
+                                    <constraint firstAttribute="width" constant="50" id="IP6-FM-ncL"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPB-GC-pax">
+                                <rect key="frame" x="66" y="8" width="318" height="176"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42" userLabel="User Name">
+                                        <rect key="frame" x="8" y="8" width="310" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkQ-Ad-DlG" userLabel="Message Body">
+                                        <rect key="frame" x="8" y="34" width="306" height="138"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="yPB-GC-pax" secondAttribute="top" constant="8" id="2qk-22-wgk"/>
+                                    <constraint firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" id="3zO-Bp-8tD"/>
+                                    <constraint firstItem="MkQ-Ad-DlG" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="8" id="99n-aE-sF2"/>
+                                    <constraint firstAttribute="bottom" secondItem="MkQ-Ad-DlG" secondAttribute="bottom" constant="4" id="Snk-Md-sd5"/>
+                                    <constraint firstAttribute="trailing" secondItem="MkQ-Ad-DlG" secondAttribute="trailing" constant="4" id="Xdr-Z1-sef"/>
+                                    <constraint firstItem="MkQ-Ad-DlG" firstAttribute="leading" secondItem="yPB-GC-pax" secondAttribute="leading" constant="8" id="lb9-JO-JdB"/>
+                                    <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="yPB-GC-pax" secondAttribute="leading" constant="8" id="yTG-HA-phc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3FY-RR-SXD" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="15" id="I1j-x6-zif"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="trailing" secondItem="2BE-c3-nQJ" secondAttribute="trailing" id="KLj-Is-kVD"/>
-                            <constraint firstItem="MkQ-Ad-DlG" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" id="NwN-VB-NId"/>
-                            <constraint firstItem="MkQ-Ad-DlG" firstAttribute="leading" secondItem="3FY-RR-SXD" secondAttribute="trailing" constant="8" id="OCt-He-UiA"/>
-                            <constraint firstItem="MkQ-Ad-DlG" firstAttribute="trailing" secondItem="2BE-c3-nQJ" secondAttribute="trailing" id="Skb-dc-gME"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" id="eyn-pY-IUU"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="3FY-RR-SXD" secondAttribute="trailing" constant="8" id="hcY-cn-tdq"/>
-                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="3FY-RR-SXD" secondAttribute="bottom" constant="15" id="pRF-Bs-cNs"/>
-                            <constraint firstItem="3FY-RR-SXD" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="16" id="ta0-Xk-ztv"/>
-                            <constraint firstAttribute="bottom" secondItem="MkQ-Ad-DlG" secondAttribute="bottom" id="zgo-IL-E4l"/>
+                            <constraint firstItem="yPB-GC-pax" firstAttribute="leading" secondItem="3FY-RR-SXD" secondAttribute="trailing" constant="8" id="DHw-c6-tVl"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="yPB-GC-pax" secondAttribute="trailing" constant="16" id="SVq-Qx-iWw"/>
+                            <constraint firstItem="3FY-RR-SXD" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="8" id="YqR-Su-3A4"/>
+                            <constraint firstItem="3FY-RR-SXD" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="8" id="c92-2E-cUZ"/>
+                            <constraint firstItem="yPB-GC-pax" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="8" id="fnL-St-5Lv"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="yPB-GC-pax" secondAttribute="bottom" constant="16" id="myH-xi-PvF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="80"/>
+                    <size key="freeformSize" width="400" height="200"/>
                     <connections>
+                        <outlet property="containerView" destination="yPB-GC-pax" id="vER-wY-ogc"/>
                         <outlet property="messageBody" destination="MkQ-Ad-DlG" id="7SD-8e-as5"/>
+                        <outlet property="nameLabelOutlet" destination="GcN-lo-r42" id="jyU-un-osG"/>
                         <outlet property="usersName" destination="GcN-lo-r42" id="Gsc-qe-wJa"/>
                         <outlet property="usersProfileImage" destination="3FY-RR-SXD" id="n3S-sT-kLg"/>
                     </connections>
