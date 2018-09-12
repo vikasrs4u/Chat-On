@@ -705,6 +705,38 @@
             endingLineNumber = "450"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chat_On.ChatViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Chat On"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vikas/Documents/Chat%20On/Chat%20On/Controller/ChatViewController.swift"
+                  timestampString = "558420274.005008"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "451"
+                  endingLineNumber = "451"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chat_On.ChatViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Chat On"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vikas/Documents/Chat%20On/Chat%20On/Controller/ChatViewController.swift"
+                  timestampString = "558420274.006682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "451"
+                  endingLineNumber = "451"
+                  offsetFromSymbolStart = "2404">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -721,6 +753,68 @@
             endingLineNumber = "24"
             landmarkName = "ChatViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chat_On.ChatViewController.counter.getter : Swift.Int"
+                  moduleName = "Chat On"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vikas/Documents/Chat%20On/Chat%20On/Controller/ChatViewController.swift"
+                  timestampString = "558420274.010713"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chat_On.ChatViewController.counter.setter : Swift.Int"
+                  moduleName = "Chat On"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vikas/Documents/Chat%20On/Chat%20On/Controller/ChatViewController.swift"
+                  timestampString = "558420274.012337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chat_On.ChatViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Chat_On.ChatViewController"
+                  moduleName = "Chat On"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vikas/Documents/Chat%20On/Chat%20On/Controller/ChatViewController.swift"
+                  timestampString = "558420274.013976"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "324">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chat_On.ChatViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Chat_On.ChatViewController&gt;"
+                  moduleName = "Chat On"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vikas/Documents/Chat%20On/Chat%20On/Controller/ChatViewController.swift"
+                  timestampString = "558420274.015602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "288">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -810,7 +904,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.935376"
+            timestampString = "558419106.572615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -826,7 +920,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.935449"
+            timestampString = "558419106.572695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -842,7 +936,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.935519"
+            timestampString = "558419106.572744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -858,7 +952,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.935576"
+            timestampString = "558419106.572783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -874,7 +968,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.935632"
+            timestampString = "558419106.572824"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -922,7 +1016,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.9358341"
+            timestampString = "558419106.57289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -938,7 +1032,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.935892"
+            timestampString = "558419106.572929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -954,7 +1048,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.9359421"
+            timestampString = "558419106.5729721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -970,7 +1064,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.935989"
+            timestampString = "558419106.5730079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -986,7 +1080,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.9360369"
+            timestampString = "558419106.5730439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -1002,7 +1096,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.936096"
+            timestampString = "558419106.573079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -1018,7 +1112,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.936148"
+            timestampString = "558419106.573115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -1034,12 +1128,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chat On Notification Content Extension/NotificationViewController.swift"
-            timestampString = "558413736.936192"
+            timestampString = "558419106.5731519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
             endingLineNumber = "73"
             landmarkName = "parseRemoteNotification(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chat On Watch Extension/NotificationController.swift"
+            timestampString = "558421440.6821491"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "didReceive(_:withCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

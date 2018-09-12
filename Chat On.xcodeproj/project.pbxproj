@@ -35,6 +35,8 @@
 		1DA57D052148B5DB00D4B9F2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA57D042148B5DB00D4B9F2 /* NotificationController.swift */; };
 		1DA57D072148B5DD00D4B9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA57D062148B5DD00D4B9F2 /* Assets.xcassets */; };
 		1DA57D0C2148B5DD00D4B9F2 /* Chat On Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DA57CEF2148B5D600D4B9F2 /* Chat On Watch.app */; };
+		1DA57D162148D08200D4B9F2 /* NotificationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA57D152148D08200D4B9F2 /* NotificationControllerExtension.swift */; };
+		43F7C9F8608394B5FB6EA7F5 /* Pods_Chat_On_Watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785C6C852E08DA03FAE86683 /* Pods_Chat_On_Watch_Extension.framework */; };
 		822EB2118A640362A4F92836 /* Pods_Chat_On_Chat_On_Notification_Content_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078435800D565E9D63B1A83C /* Pods_Chat_On_Chat_On_Notification_Content_Extension.framework */; };
 		B16796ED692259168377C5FB /* Pods_Chat_On.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E77FC9CCF5DBD7EC9F6F66C /* Pods_Chat_On.framework */; };
 /* End PBXBuildFile section */
@@ -135,12 +137,18 @@
 		1DA57D062148B5DD00D4B9F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA57D082148B5DD00D4B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA57D092148B5DD00D4B9F2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		1DA57D152148D08200D4B9F2 /* NotificationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationControllerExtension.swift; sourceTree = "<group>"; };
 		1DD13C2F213902DC00A24FE6 /* Chat On.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Chat On.entitlements"; sourceTree = "<group>"; };
 		39FB6012DE741E5E4D9D3078 /* Pods-Chat On.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On/Pods-Chat On.release.xcconfig"; sourceTree = "<group>"; };
+		4687B7B5D26744DA3AF59CD8 /* Pods-Chat On Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On Watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On Watch Extension/Pods-Chat On Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		785C6C852E08DA03FAE86683 /* Pods_Chat_On_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_On_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D37B7743607EF5E9A8E27BB /* Pods_Chat_On_Chat_On_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_On_Chat_On_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7EE3E7A7CF1215E9DDDBF7 /* Pods-Chat On-Chat On Notification Content Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On-Chat On Notification Content Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On-Chat On Notification Content Extension/Pods-Chat On-Chat On Notification Content Extension.release.xcconfig"; sourceTree = "<group>"; };
 		8E77FC9CCF5DBD7EC9F6F66C /* Pods_Chat_On.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_On.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D6D2E65436F50EC7FB6BF3 /* Pods-Chat On-Chat On Notification Content Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On-Chat On Notification Content Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On-Chat On Notification Content Extension/Pods-Chat On-Chat On Notification Content Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		CE41B40447AEFEDD6559FDC8 /* Pods-Chat On Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On Watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On Watch Extension/Pods-Chat On Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		EB66CF07927272E8E33F1D41 /* Pods-Chat On.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On/Pods-Chat On.debug.xcconfig"; sourceTree = "<group>"; };
+		FB7315C1A2B3EFFA84A72B11 /* Pods_Chat_On_Chat_On_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_On_Chat_On_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F7C9F8608394B5FB6EA7F5 /* Pods_Chat_On_Watch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6EABC101DC933D6D1E8DE44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +195,9 @@
 				1D01043621472B0600FF3821 /* UserNotifications.framework */,
 				1D01043821472B0600FF3821 /* UserNotificationsUI.framework */,
 				078435800D565E9D63B1A83C /* Pods_Chat_On_Chat_On_Notification_Content_Extension.framework */,
+				FB7315C1A2B3EFFA84A72B11 /* Pods_Chat_On_Chat_On_Watch_Extension.framework */,
+				7D37B7743607EF5E9A8E27BB /* Pods_Chat_On_Chat_On_Watch.framework */,
+				785C6C852E08DA03FAE86683 /* Pods_Chat_On_Watch_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -289,6 +308,7 @@
 				1DA57D002148B5DB00D4B9F2 /* InterfaceController.swift */,
 				1DA57D022148B5DB00D4B9F2 /* ExtensionDelegate.swift */,
 				1DA57D042148B5DB00D4B9F2 /* NotificationController.swift */,
+				1DA57D152148D08200D4B9F2 /* NotificationControllerExtension.swift */,
 				1DA57D062148B5DD00D4B9F2 /* Assets.xcassets */,
 				1DA57D082148B5DD00D4B9F2 /* Info.plist */,
 				1DA57D092148B5DD00D4B9F2 /* PushNotificationPayload.apns */,
@@ -303,6 +323,8 @@
 				39FB6012DE741E5E4D9D3078 /* Pods-Chat On.release.xcconfig */,
 				C6D6D2E65436F50EC7FB6BF3 /* Pods-Chat On-Chat On Notification Content Extension.debug.xcconfig */,
 				8A7EE3E7A7CF1215E9DDDBF7 /* Pods-Chat On-Chat On Notification Content Extension.release.xcconfig */,
+				CE41B40447AEFEDD6559FDC8 /* Pods-Chat On Watch Extension.debug.xcconfig */,
+				4687B7B5D26744DA3AF59CD8 /* Pods-Chat On Watch Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -357,6 +379,7 @@
 			buildPhases = (
 				1DA57CED2148B5D600D4B9F2 /* Resources */,
 				1DA57D102148B5DD00D4B9F2 /* Embed App Extensions */,
+				A6EABC101DC933D6D1E8DE44 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,9 +395,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DA57D0D2148B5DD00D4B9F2 /* Build configuration list for PBXNativeTarget "Chat On Watch Extension" */;
 			buildPhases = (
+				FBB065EEB80D717D25F8D6F7 /* [CP] Check Pods Manifest.lock */,
 				1DA57CF72148B5D900D4B9F2 /* Sources */,
 				1DA57CF82148B5D900D4B9F2 /* Frameworks */,
 				1DA57CF92148B5D900D4B9F2 /* Resources */,
+				8D65B506B9027DC10EA962DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,8 +508,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chat On/Pods-Chat On-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage-iOS/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -508,6 +533,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chat On/Pods-Chat On-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D65B506B9027DC10EA962DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chat On Watch Extension/Pods-Chat On Watch Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage-watchOS/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chat On Watch Extension/Pods-Chat On Watch Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A01966B92B9DA188289B5E56 /* [CP] Check Pods Manifest.lock */ = {
@@ -546,6 +591,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FBB065EEB80D717D25F8D6F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chat On Watch Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -578,6 +641,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA57D162148D08200D4B9F2 /* NotificationControllerExtension.swift in Sources */,
 				1DA57D052148B5DB00D4B9F2 /* NotificationController.swift in Sources */,
 				1DA57D032148B5DB00D4B9F2 /* ExtensionDelegate.swift in Sources */,
 				1DA57D012148B5DB00D4B9F2 /* InterfaceController.swift in Sources */,
@@ -844,6 +908,7 @@
 		};
 		1DA57D0E2148B5DD00D4B9F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE41B40447AEFEDD6559FDC8 /* Pods-Chat On Watch Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -866,6 +931,7 @@
 		};
 		1DA57D0F2148B5DD00D4B9F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4687B7B5D26744DA3AF59CD8 /* Pods-Chat On Watch Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;

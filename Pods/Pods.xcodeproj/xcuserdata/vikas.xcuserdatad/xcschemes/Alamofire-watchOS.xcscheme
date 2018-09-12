@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35763C8A39FC8AD320625A666FF9B499"
-               BuildableName = "Pods_Chat_On.framework"
-               BlueprintName = "Pods-Chat On"
+               BlueprintIdentifier = "173E4104E4F2CE5ECC896A154802C6D5"
+               BuildableName = "Alamofire.framework"
+               BlueprintName = "Alamofire-watchOS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "35763C8A39FC8AD320625A666FF9B499"
-            BuildableName = "Pods_Chat_On.framework"
-            BlueprintName = "Pods-Chat On"
+            BlueprintIdentifier = "173E4104E4F2CE5ECC896A154802C6D5"
+            BuildableName = "Alamofire.framework"
+            BlueprintName = "Alamofire-watchOS"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

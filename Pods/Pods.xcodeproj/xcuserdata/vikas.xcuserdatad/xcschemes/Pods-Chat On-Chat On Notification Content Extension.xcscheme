@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F05172DD1EA138E0FD32D49B5430DB2"
+               BlueprintIdentifier = "539F245446544C82C787DA181E61D549"
                BuildableName = "Pods_Chat_On_Chat_On_Notification_Content_Extension.framework"
                BlueprintName = "Pods-Chat On-Chat On Notification Content Extension"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F05172DD1EA138E0FD32D49B5430DB2"
+            BlueprintIdentifier = "539F245446544C82C787DA181E61D549"
             BuildableName = "Pods_Chat_On_Chat_On_Notification_Content_Extension.framework"
             BlueprintName = "Pods-Chat On-Chat On Notification Content Extension"
             ReferencedContainer = "container:Pods.xcodeproj">

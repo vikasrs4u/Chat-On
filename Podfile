@@ -22,6 +22,11 @@ target 'Chat On Notification Content Extension' do
     pod 'AlamofireImage'
 end
 
+target 'Chat On Watch Extension' do
+    platform :watchos, '2.0'
+    pod 'AlamofireImage'
+end
+
 end
 
 

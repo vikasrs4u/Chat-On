@@ -7,22 +7,22 @@
 		<key>Chat On Notification Content Extension.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>20</integer>
 		</dict>
 		<key>Chat On Watch (Notification).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>22</integer>
 		</dict>
 		<key>Chat On Watch.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>21</integer>
 		</dict>
 		<key>Chat On.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>19</integer>
 		</dict>
 	</dict>
 </dict>
