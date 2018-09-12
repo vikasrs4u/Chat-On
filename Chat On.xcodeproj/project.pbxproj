@@ -27,6 +27,14 @@
 		1D9EDE15212BCFA8003ED9A8 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EDE14212BCFA8003ED9A8 /* MessageCell.xib */; };
 		1D9EDE17212BD9CC003ED9A8 /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDE16212BD9CC003ED9A8 /* CustomMessageCell.swift */; };
 		1D9EDE19212BE044003ED9A8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDE18212BE044003ED9A8 /* ChatViewController.swift */; };
+		1DA57CF32148B5D600D4B9F2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA57CF12148B5D600D4B9F2 /* Interface.storyboard */; };
+		1DA57CF52148B5D800D4B9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA57CF42148B5D800D4B9F2 /* Assets.xcassets */; };
+		1DA57CFC2148B5DA00D4B9F2 /* Chat On Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1DA57CFB2148B5DA00D4B9F2 /* Chat On Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1DA57D012148B5DB00D4B9F2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA57D002148B5DB00D4B9F2 /* InterfaceController.swift */; };
+		1DA57D032148B5DB00D4B9F2 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA57D022148B5DB00D4B9F2 /* ExtensionDelegate.swift */; };
+		1DA57D052148B5DB00D4B9F2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA57D042148B5DB00D4B9F2 /* NotificationController.swift */; };
+		1DA57D072148B5DD00D4B9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA57D062148B5DD00D4B9F2 /* Assets.xcassets */; };
+		1DA57D0C2148B5DD00D4B9F2 /* Chat On Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DA57CEF2148B5D600D4B9F2 /* Chat On Watch.app */; };
 		822EB2118A640362A4F92836 /* Pods_Chat_On_Chat_On_Notification_Content_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078435800D565E9D63B1A83C /* Pods_Chat_On_Chat_On_Notification_Content_Extension.framework */; };
 		B16796ED692259168377C5FB /* Pods_Chat_On.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E77FC9CCF5DBD7EC9F6F66C /* Pods_Chat_On.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +46,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1D01043421472B0600FF3821;
 			remoteInfo = "Chat On Notification Content Extension";
+		};
+		1DA57CFD2148B5DA00D4B9F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D5CDC4E212B847200BCEF0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DA57CFA2148B5D900D4B9F2;
+			remoteInfo = "Chat On Watch Extension";
+		};
+		1DA57D0A2148B5DD00D4B9F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D5CDC4E212B847200BCEF0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DA57CEE2148B5D600D4B9F2;
+			remoteInfo = "Chat On Watch";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +73,28 @@
 				1D01044321472B0600FF3821 /* Chat On Notification Content Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA57D102148B5DD00D4B9F2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1DA57CFC2148B5DA00D4B9F2 /* Chat On Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA57D142148B5DD00D4B9F2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1DA57D0C2148B5DD00D4B9F2 /* Chat On Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -80,6 +124,17 @@
 		1D9EDE14212BCFA8003ED9A8 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		1D9EDE16212BD9CC003ED9A8 /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		1D9EDE18212BE044003ED9A8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1DA57CEF2148B5D600D4B9F2 /* Chat On Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat On Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA57CF22148B5D600D4B9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1DA57CF42148B5D800D4B9F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DA57CF62148B5D800D4B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA57CFB2148B5DA00D4B9F2 /* Chat On Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Chat On Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA57D002148B5DB00D4B9F2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1DA57D022148B5DB00D4B9F2 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		1DA57D042148B5DB00D4B9F2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		1DA57D062148B5DD00D4B9F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DA57D082148B5DD00D4B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA57D092148B5DD00D4B9F2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		1DD13C2F213902DC00A24FE6 /* Chat On.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Chat On.entitlements"; sourceTree = "<group>"; };
 		39FB6012DE741E5E4D9D3078 /* Pods-Chat On.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On/Pods-Chat On.release.xcconfig"; sourceTree = "<group>"; };
 		8A7EE3E7A7CF1215E9DDDBF7 /* Pods-Chat On-Chat On Notification Content Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On-Chat On Notification Content Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On-Chat On Notification Content Extension/Pods-Chat On-Chat On Notification Content Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16796ED692259168377C5FB /* Pods_Chat_On.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA57CF82148B5D900D4B9F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +198,8 @@
 			children = (
 				1D5CDC58212B847200BCEF0A /* Chat On */,
 				1D01043A21472B0600FF3821 /* Chat On Notification Content Extension */,
+				1DA57CF02148B5D600D4B9F2 /* Chat On Watch */,
+				1DA57CFF2148B5DA00D4B9F2 /* Chat On Watch Extension */,
 				1D5CDC57212B847200BCEF0A /* Products */,
 				B5834FE093185137E5161A68 /* Pods */,
 				0F51A46D0AC611BF876A3FD9 /* Frameworks */,
@@ -147,6 +211,8 @@
 			children = (
 				1D5CDC56212B847200BCEF0A /* Chat On.app */,
 				1D01043521472B0600FF3821 /* Chat On Notification Content Extension.appex */,
+				1DA57CEF2148B5D600D4B9F2 /* Chat On Watch.app */,
+				1DA57CFB2148B5DA00D4B9F2 /* Chat On Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,6 +273,29 @@
 			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
+		1DA57CF02148B5D600D4B9F2 /* Chat On Watch */ = {
+			isa = PBXGroup;
+			children = (
+				1DA57CF12148B5D600D4B9F2 /* Interface.storyboard */,
+				1DA57CF42148B5D800D4B9F2 /* Assets.xcassets */,
+				1DA57CF62148B5D800D4B9F2 /* Info.plist */,
+			);
+			path = "Chat On Watch";
+			sourceTree = "<group>";
+		};
+		1DA57CFF2148B5DA00D4B9F2 /* Chat On Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1DA57D002148B5DB00D4B9F2 /* InterfaceController.swift */,
+				1DA57D022148B5DB00D4B9F2 /* ExtensionDelegate.swift */,
+				1DA57D042148B5DB00D4B9F2 /* NotificationController.swift */,
+				1DA57D062148B5DD00D4B9F2 /* Assets.xcassets */,
+				1DA57D082148B5DD00D4B9F2 /* Info.plist */,
+				1DA57D092148B5DD00D4B9F2 /* PushNotificationPayload.apns */,
+			);
+			path = "Chat On Watch Extension";
+			sourceTree = "<group>";
+		};
 		B5834FE093185137E5161A68 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,16 +338,52 @@
 				1D5CDC54212B847200BCEF0A /* Resources */,
 				86D9B8FCE06F2BA53AA36DE5 /* [CP] Embed Pods Frameworks */,
 				1D01044721472B0600FF3821 /* Embed App Extensions */,
+				1DA57D142148B5DD00D4B9F2 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				1D01044221472B0600FF3821 /* PBXTargetDependency */,
+				1DA57D0B2148B5DD00D4B9F2 /* PBXTargetDependency */,
 			);
 			name = "Chat On";
 			productName = "Chat On";
 			productReference = 1D5CDC56212B847200BCEF0A /* Chat On.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1DA57CEE2148B5D600D4B9F2 /* Chat On Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA57D112148B5DD00D4B9F2 /* Build configuration list for PBXNativeTarget "Chat On Watch" */;
+			buildPhases = (
+				1DA57CED2148B5D600D4B9F2 /* Resources */,
+				1DA57D102148B5DD00D4B9F2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DA57CFE2148B5DA00D4B9F2 /* PBXTargetDependency */,
+			);
+			name = "Chat On Watch";
+			productName = "Chat On Watch";
+			productReference = 1DA57CEF2148B5D600D4B9F2 /* Chat On Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1DA57CFA2148B5D900D4B9F2 /* Chat On Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA57D0D2148B5DD00D4B9F2 /* Build configuration list for PBXNativeTarget "Chat On Watch Extension" */;
+			buildPhases = (
+				1DA57CF72148B5D900D4B9F2 /* Sources */,
+				1DA57CF82148B5D900D4B9F2 /* Frameworks */,
+				1DA57CF92148B5D900D4B9F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat On Watch Extension";
+			productName = "Chat On Watch Extension";
+			productReference = 1DA57CFB2148B5DA00D4B9F2 /* Chat On Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -281,6 +406,12 @@
 							};
 						};
 					};
+					1DA57CEE2148B5D600D4B9F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					1DA57CFA2148B5D900D4B9F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 1D5CDC51212B847200BCEF0A /* Build configuration list for PBXProject "Chat On" */;
@@ -298,6 +429,8 @@
 			targets = (
 				1D5CDC55212B847200BCEF0A /* Chat On */,
 				1D01043421472B0600FF3821 /* Chat On Notification Content Extension */,
+				1DA57CEE2148B5D600D4B9F2 /* Chat On Watch */,
+				1DA57CFA2148B5D900D4B9F2 /* Chat On Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +453,23 @@
 				1D5CDC6C212B8D6300BCEF0A /* GoogleService-Info.plist in Resources */,
 				1D5CDC61212B847400BCEF0A /* Assets.xcassets in Resources */,
 				1D5CDC5F212B847200BCEF0A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA57CED2148B5D600D4B9F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA57CF52148B5D800D4B9F2 /* Assets.xcassets in Resources */,
+				1DA57CF32148B5D600D4B9F2 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA57CF92148B5D900D4B9F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA57D072148B5DD00D4B9F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +574,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DA57CF72148B5D900D4B9F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA57D052148B5DB00D4B9F2 /* NotificationController.swift in Sources */,
+				1DA57D032148B5DB00D4B9F2 /* ExtensionDelegate.swift in Sources */,
+				1DA57D012148B5DB00D4B9F2 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -431,6 +591,16 @@
 			isa = PBXTargetDependency;
 			target = 1D01043421472B0600FF3821 /* Chat On Notification Content Extension */;
 			targetProxy = 1D01044121472B0600FF3821 /* PBXContainerItemProxy */;
+		};
+		1DA57CFE2148B5DA00D4B9F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DA57CFA2148B5D900D4B9F2 /* Chat On Watch Extension */;
+			targetProxy = 1DA57CFD2148B5DA00D4B9F2 /* PBXContainerItemProxy */;
+		};
+		1DA57D0B2148B5DD00D4B9F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DA57CEE2148B5D600D4B9F2 /* Chat On Watch */;
+			targetProxy = 1DA57D0A2148B5DD00D4B9F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -457,6 +627,14 @@
 				1D5CDC63212B847400BCEF0A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1DA57CF12148B5D600D4B9F2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DA57CF22148B5D600D4B9F2 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -664,6 +842,88 @@
 			};
 			name = Release;
 		};
+		1DA57D0E2148B5DD00D4B9F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KQ67BZRB9J;
+				INFOPLIST_FILE = "Chat On Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vikas.shetty.Chat-On.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		1DA57D0F2148B5DD00D4B9F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KQ67BZRB9J;
+				INFOPLIST_FILE = "Chat On Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vikas.shetty.Chat-On.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		1DA57D122148B5DD00D4B9F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KQ67BZRB9J;
+				IBSC_MODULE = Chat_On_Watch_Extension;
+				INFOPLIST_FILE = "Chat On Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vikas.shetty.Chat-On.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		1DA57D132148B5DD00D4B9F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KQ67BZRB9J;
+				IBSC_MODULE = Chat_On_Watch_Extension;
+				INFOPLIST_FILE = "Chat On Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vikas.shetty.Chat-On.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -690,6 +950,24 @@
 			buildConfigurations = (
 				1D5CDC69212B847400BCEF0A /* Debug */,
 				1D5CDC6A212B847400BCEF0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DA57D0D2148B5DD00D4B9F2 /* Build configuration list for PBXNativeTarget "Chat On Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA57D0E2148B5DD00D4B9F2 /* Debug */,
+				1DA57D0F2148B5DD00D4B9F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DA57D112148B5DD00D4B9F2 /* Build configuration list for PBXNativeTarget "Chat On Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA57D122148B5DD00D4B9F2 /* Debug */,
+				1DA57D132148B5DD00D4B9F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
