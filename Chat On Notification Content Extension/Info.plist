@@ -31,7 +31,7 @@
 			<key>UNNotificationExtensionCategory</key>
 			<string>messageNotificaionCategory</string>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<real>1</real>
+			<real>0.2</real>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>
