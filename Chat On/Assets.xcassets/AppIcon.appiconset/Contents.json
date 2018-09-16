@@ -107,6 +107,74 @@
       "idiom" : "ios-marketing",
       "filename" : "Chat-17.png",
       "scale" : "1x"
+    },
+    {
+      "size" : "24x24",
+      "idiom" : "watch",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM.png",
+      "scale" : "2x",
+      "role" : "notificationCenter",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "27.5x27.5",
+      "idiom" : "watch",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM-1.png",
+      "scale" : "2x",
+      "role" : "notificationCenter",
+      "subtype" : "42mm"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "watch",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM-2.png",
+      "role" : "companionSettings",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "watch",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM-3.png",
+      "role" : "companionSettings",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "watch",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM-4.png",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "44x44",
+      "idiom" : "watch",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM-5.png",
+      "scale" : "2x",
+      "role" : "longLook",
+      "subtype" : "42mm"
+    },
+    {
+      "size" : "86x86",
+      "idiom" : "watch",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM-6.png",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "98x98",
+      "idiom" : "watch",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM-7.png",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "42mm"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "watch-marketing",
+      "filename" : "Screen Shot 2018-09-11 at 7.48.57 PM-8.png",
+      "scale" : "1x"
     }
   ],
   "info" : {

@@ -9,8 +9,6 @@
 import WatchKit
 import Foundation
 import UserNotifications
-import AlamofireImage
-import Alamofire
 
 
 
@@ -49,32 +47,19 @@ class NotificationController: WKUserNotificationInterfaceController {
         nameLabel.setText(notification.request.content.title)
         messageBodyLabel.setText(notification.request.content.body)
         
-        if let notification = notification.request.content.userInfo as? [String:AnyObject]
+        guard let attachment = notification.request.content.attachments.first else { return }
+        
+        // Get the attachment and set the image view.
+        if attachment.url.startAccessingSecurityScopedResource(), let data = try? Data(contentsOf: attachment.url)
         {
-            let imageUrl = parseRemoteNotification(notification: notification)
-            if (imageUrl?.count == 0)
-            {
-                self.imageView.setImage(UIImage(named: "Default Avatar Image"))
-            }
-            else
-            {
-                self.imageView.setImageWithUrl(url: imageUrl!)
-            }
+            self.imageView.setImage(UIImage(data: data))
             
+            attachment.url.stopAccessingSecurityScopedResource()
         }
         
         completionHandler(.custom)
     }
     
-    func parseRemoteNotification(notification:[String:AnyObject]) -> String?
-    {
-        if let imageUrl = notification["image_url"] as? String
-        {
-            return imageUrl
-        }
-        
-        return nil
-    }
 }
 
 

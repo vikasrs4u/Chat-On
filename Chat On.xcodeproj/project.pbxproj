@@ -36,6 +36,8 @@
 		1DA57D072148B5DD00D4B9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA57D062148B5DD00D4B9F2 /* Assets.xcassets */; };
 		1DA57D0C2148B5DD00D4B9F2 /* Chat On Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DA57CEF2148B5D600D4B9F2 /* Chat On Watch.app */; };
 		1DA57D162148D08200D4B9F2 /* NotificationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA57D152148D08200D4B9F2 /* NotificationControllerExtension.swift */; };
+		1DA57D1E214DB26300D4B9F2 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA57D1D214DB26300D4B9F2 /* NotificationService.swift */; };
+		1DA57D22214DB26300D4B9F2 /* Chat On Notification Service Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1DA57D1B214DB26300D4B9F2 /* Chat On Notification Service Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		43F7C9F8608394B5FB6EA7F5 /* Pods_Chat_On_Watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785C6C852E08DA03FAE86683 /* Pods_Chat_On_Watch_Extension.framework */; };
 		822EB2118A640362A4F92836 /* Pods_Chat_On_Chat_On_Notification_Content_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078435800D565E9D63B1A83C /* Pods_Chat_On_Chat_On_Notification_Content_Extension.framework */; };
 		B16796ED692259168377C5FB /* Pods_Chat_On.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E77FC9CCF5DBD7EC9F6F66C /* Pods_Chat_On.framework */; };
@@ -63,6 +65,13 @@
 			remoteGlobalIDString = 1DA57CEE2148B5D600D4B9F2;
 			remoteInfo = "Chat On Watch";
 		};
+		1DA57D20214DB26300D4B9F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D5CDC4E212B847200BCEF0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DA57D1A214DB26300D4B9F2;
+			remoteInfo = "Chat On Notification Service Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +81,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				1DA57D22214DB26300D4B9F2 /* Chat On Notification Service Extension.appex in Embed App Extensions */,
 				1D01044321472B0600FF3821 /* Chat On Notification Content Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -138,6 +148,9 @@
 		1DA57D082148B5DD00D4B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA57D092148B5DD00D4B9F2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		1DA57D152148D08200D4B9F2 /* NotificationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationControllerExtension.swift; sourceTree = "<group>"; };
+		1DA57D1B214DB26300D4B9F2 /* Chat On Notification Service Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Chat On Notification Service Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA57D1D214DB26300D4B9F2 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		1DA57D1F214DB26300D4B9F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DD13C2F213902DC00A24FE6 /* Chat On.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Chat On.entitlements"; sourceTree = "<group>"; };
 		39FB6012DE741E5E4D9D3078 /* Pods-Chat On.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On/Pods-Chat On.release.xcconfig"; sourceTree = "<group>"; };
 		4687B7B5D26744DA3AF59CD8 /* Pods-Chat On Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat On Watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat On Watch Extension/Pods-Chat On Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F7C9F8608394B5FB6EA7F5 /* Pods_Chat_On_Watch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA57D18214DB26300D4B9F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +239,7 @@
 				1D01043A21472B0600FF3821 /* Chat On Notification Content Extension */,
 				1DA57CF02148B5D600D4B9F2 /* Chat On Watch */,
 				1DA57CFF2148B5DA00D4B9F2 /* Chat On Watch Extension */,
+				1DA57D1C214DB26300D4B9F2 /* Chat On Notification Service Extension */,
 				1D5CDC57212B847200BCEF0A /* Products */,
 				B5834FE093185137E5161A68 /* Pods */,
 				0F51A46D0AC611BF876A3FD9 /* Frameworks */,
@@ -232,6 +253,7 @@
 				1D01043521472B0600FF3821 /* Chat On Notification Content Extension.appex */,
 				1DA57CEF2148B5D600D4B9F2 /* Chat On Watch.app */,
 				1DA57CFB2148B5DA00D4B9F2 /* Chat On Watch Extension.appex */,
+				1DA57D1B214DB26300D4B9F2 /* Chat On Notification Service Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,6 +338,15 @@
 			path = "Chat On Watch Extension";
 			sourceTree = "<group>";
 		};
+		1DA57D1C214DB26300D4B9F2 /* Chat On Notification Service Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1DA57D1D214DB26300D4B9F2 /* NotificationService.swift */,
+				1DA57D1F214DB26300D4B9F2 /* Info.plist */,
+			);
+			path = "Chat On Notification Service Extension";
+			sourceTree = "<group>";
+		};
 		B5834FE093185137E5161A68 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +398,7 @@
 			dependencies = (
 				1D01044221472B0600FF3821 /* PBXTargetDependency */,
 				1DA57D0B2148B5DD00D4B9F2 /* PBXTargetDependency */,
+				1DA57D21214DB26300D4B9F2 /* PBXTargetDependency */,
 			);
 			name = "Chat On";
 			productName = "Chat On";
@@ -410,6 +442,23 @@
 			productReference = 1DA57CFB2148B5DA00D4B9F2 /* Chat On Watch Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		1DA57D1A214DB26300D4B9F2 /* Chat On Notification Service Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA57D23214DB26300D4B9F2 /* Build configuration list for PBXNativeTarget "Chat On Notification Service Extension" */;
+			buildPhases = (
+				1DA57D17214DB26300D4B9F2 /* Sources */,
+				1DA57D18214DB26300D4B9F2 /* Frameworks */,
+				1DA57D19214DB26300D4B9F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat On Notification Service Extension";
+			productName = "Chat On Notification Service Extension";
+			productReference = 1DA57D1B214DB26300D4B9F2 /* Chat On Notification Service Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -437,6 +486,9 @@
 					1DA57CFA2148B5D900D4B9F2 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					1DA57D1A214DB26300D4B9F2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 1D5CDC51212B847200BCEF0A /* Build configuration list for PBXProject "Chat On" */;
@@ -456,6 +508,7 @@
 				1D01043421472B0600FF3821 /* Chat On Notification Content Extension */,
 				1DA57CEE2148B5D600D4B9F2 /* Chat On Watch */,
 				1DA57CFA2148B5D900D4B9F2 /* Chat On Watch Extension */,
+				1DA57D1A214DB26300D4B9F2 /* Chat On Notification Service Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -495,6 +548,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA57D072148B5DD00D4B9F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA57D19214DB26300D4B9F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +708,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DA57D17214DB26300D4B9F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA57D1E214DB26300D4B9F2 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -665,6 +733,11 @@
 			isa = PBXTargetDependency;
 			target = 1DA57CEE2148B5D600D4B9F2 /* Chat On Watch */;
 			targetProxy = 1DA57D0A2148B5DD00D4B9F2 /* PBXContainerItemProxy */;
+		};
+		1DA57D21214DB26300D4B9F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DA57D1A214DB26300D4B9F2 /* Chat On Notification Service Extension */;
+			targetProxy = 1DA57D20214DB26300D4B9F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -990,6 +1063,44 @@
 			};
 			name = Release;
 		};
+		1DA57D24214DB26300D4B9F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KQ67BZRB9J;
+				INFOPLIST_FILE = "Chat On Notification Service Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vikas.shetty.Chat-On.Chat-On-Notification-Service-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DA57D25214DB26300D4B9F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KQ67BZRB9J;
+				INFOPLIST_FILE = "Chat On Notification Service Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vikas.shetty.Chat-On.Chat-On-Notification-Service-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1034,6 +1145,15 @@
 			buildConfigurations = (
 				1DA57D122148B5DD00D4B9F2 /* Debug */,
 				1DA57D132148B5DD00D4B9F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DA57D23214DB26300D4B9F2 /* Build configuration list for PBXNativeTarget "Chat On Notification Service Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA57D24214DB26300D4B9F2 /* Debug */,
+				1DA57D25214DB26300D4B9F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

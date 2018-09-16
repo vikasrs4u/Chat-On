@@ -47,34 +47,17 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         
         self.messageBody.text = notification.request.content.body
         
+        guard let attachment = notification.request.content.attachments.first else { return }
         
-        print(notification.request.content.userInfo.values)
-        
-        if let notification = notification.request.content.userInfo as? [String:AnyObject]
+        // Get the attachment and set the image view.
+        if attachment.url.startAccessingSecurityScopedResource(),
+            let data = try? Data(contentsOf: attachment.url)
         {
-            let imageUrl = parseRemoteNotification(notification: notification)
+            self.usersProfileImage.image = UIImage(data: data)
             
-            if (imageUrl?.count == 0)
-            {
-                self.usersProfileImage.image = UIImage(named: "Default Avatar Image")
-            }
-            else
-            {
-                let theURL = NSURL(string:imageUrl!)
-                self.usersProfileImage.af_setImage(withURL:theURL! as URL, placeholderImage: UIImage(named: "Default Avatar Image"), imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion:nil)
-            }
-            
+            attachment.url.stopAccessingSecurityScopedResource()
         }
     }
     
     
-func parseRemoteNotification(notification:[String:AnyObject]) -> String?
-{
-        if let imageUrl = notification["image_url"] as? String
-        {
-            return imageUrl
-        }
-        
-        return nil
-    }
 }

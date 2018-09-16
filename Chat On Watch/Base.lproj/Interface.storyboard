@@ -39,7 +39,7 @@
                     <items>
                         <group width="1" alignment="left" id="djk-87-WLt">
                             <items>
-                                <imageView width="45" height="40" alignment="left" image="Default Avatar Image" id="HqI-3P-OUv"/>
+                                <imageView width="45" height="40" alignment="left" image="Default Avatar Image" contentMode="scaleAspectFit" id="HqI-3P-OUv"/>
                             </items>
                         </group>
                         <label width="133" height="19" alignment="left" text="Label" id="A7l-CQ-86r">

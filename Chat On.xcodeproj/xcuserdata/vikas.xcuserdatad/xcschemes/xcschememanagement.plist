@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>20</integer>
 		</dict>
+		<key>Chat On Notification Service Extension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
 		<key>Chat On Watch (Notification).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
