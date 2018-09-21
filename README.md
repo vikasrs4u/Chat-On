@@ -13,7 +13,7 @@ Chat On is a Chat app for iPhone that lets you chat with all the logged in user.
 
 ### Notifications 
 
-![img_2917](https://user-images.githubusercontent.com/22437872/45853089-285e9a80-bcf8-11e8-92e5-b21ba6e6870f.PNG)
+<img width="945" alt="screen shot 2018-09-20 at 5 03 21 pm" src="https://user-images.githubusercontent.com/22437872/45853089-285e9a80-bcf8-11e8-92e5-b21ba6e6870f.PNG">
 
 ![img_2921](https://user-images.githubusercontent.com/22437872/45853098-2eed1200-bcf8-11e8-8f74-fd47a1a558e1.PNG)
 
