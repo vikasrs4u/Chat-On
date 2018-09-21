@@ -51,15 +51,27 @@ Firebase Real-time Database
 
 1) Easy sign-up process powered by Firebase Authentication. 
 
-2) The app lets you Login with your email and password. 
+2) User can upload the photo during signup, which will be refelcted in the chat. 
 
-3) All the logged in user gets the message in real-time.  
+3) User can change the profile photo in later point of time. 
 
-4) Clean and beautiful UI screens.
+4) The app lets you Login with your email and password. 
 
-5) The app works in both portrait and landscape mode. 
+5) All the logged in user gets the message in real-time. 
 
-6) App work across all iPhones starting from iPhone SE to iPhone X and in all orientations. 
+6) When user sends a message every person in the group is sent a Push Notification. 
+
+7) Apple Push notifications are powered by Firebase Cloud Functions. 
+
+8) Even when a new member is added to the group all the other members recieve push notification regarding the same. 
+
+9) Rich customized notification with image of sender is shown. 
+
+10) Clean and beautiful UI screens.
+
+11) The app works in both portrait and landscape mode. 
+
+12) App work across all iPhones starting from iPhone SE to iPhone XS Max and in all orientations. 
 
 
 ## License
