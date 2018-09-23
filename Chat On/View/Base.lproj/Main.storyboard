@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFE-C3-aEi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fgR-OG-N4W">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -412,10 +412,59 @@
             </objects>
             <point key="canvasLocation" x="3340" y="-964.76761619190415"/>
         </scene>
+        <!--Demo Screen View Controller-->
+        <scene sceneID="Ubq-wr-u1m">
+            <objects>
+                <viewController storyboardIdentifier="demoBoard" id="fgR-OG-N4W" customClass="DemoScreenViewController" customModule="Chat_On" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYw-4f-vWh" userLabel="View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPd-EU-pmx" customClass="OnboardingViewClass" customModule="Chat_On" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIT-6H-9dV">
+                                <rect key="frame" x="147.5" y="587" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="RwH-Jz-U7v"/>
+                                    <constraint firstAttribute="height" constant="30" id="UtI-50-EZu"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonClickAction:" destination="fgR-OG-N4W" eventType="touchUpInside" id="UuN-Xf-OOe"/>
+                                    <segue destination="dFE-C3-aEi" kind="show" id="MMh-dU-dEt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qIT-6H-9dV" firstAttribute="centerX" secondItem="PYw-4f-vWh" secondAttribute="centerX" id="MGB-d3-Tmx"/>
+                            <constraint firstItem="zPd-EU-pmx" firstAttribute="bottom" secondItem="HEP-p2-AGs" secondAttribute="bottom" id="g3m-nC-T0y"/>
+                            <constraint firstItem="HEP-p2-AGs" firstAttribute="bottom" secondItem="qIT-6H-9dV" secondAttribute="bottom" constant="50" id="iOq-Ux-Qhz"/>
+                            <constraint firstItem="zPd-EU-pmx" firstAttribute="trailing" secondItem="HEP-p2-AGs" secondAttribute="trailing" id="ngk-tF-wAa"/>
+                            <constraint firstItem="zPd-EU-pmx" firstAttribute="leading" secondItem="HEP-p2-AGs" secondAttribute="leading" id="pe0-91-rEV"/>
+                            <constraint firstItem="zPd-EU-pmx" firstAttribute="top" secondItem="PYw-4f-vWh" secondAttribute="top" id="sIn-wk-2ez"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HEP-p2-AGs"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButtonOutlet" destination="qIT-6H-9dV" id="RmH-bL-xF3"/>
+                        <outlet property="onBoardViewOutlet" destination="zPd-EU-pmx" id="v3q-yd-C3V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3m-ZI-Zwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1164" y="83.208395802098963"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="iAs-CN-ID7">
             <objects>
-                <navigationController id="dFE-C3-aEi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainScreen" id="dFE-C3-aEi" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PCk-nR-Sxy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -436,6 +485,6 @@
         <image name="SignUp" width="980" height="2016"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Igi-Cr-JOJ"/>
+        <segue reference="iFO-Ak-9YV"/>
     </inferredMetricsTieBreakers>
 </document>

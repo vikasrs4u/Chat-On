@@ -9,7 +9,6 @@
 import UIKit
 import UserNotifications
 import UserNotificationsUI
-import AlamofireImage
 import ChameleonFramework
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {

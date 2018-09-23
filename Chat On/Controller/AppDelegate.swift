@@ -20,35 +20,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var window: UIWindow?
 
+    var userDefaults = UserDefaults.standard
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-        // Method to request for users notification
+
+        FirebaseApp.configure()
         
-        NotificationCenter.default.addObserver(self, selector:
-            #selector(tokenRefreshNotification), name:
-            NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+        window = UIWindow(frame: UIScreen.main.bounds)
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound])
-        { (isGranted, error) in
+        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        
+        // Identifier should match the story board ID we have sent in the story board
+        var initialViewController = storyBoard.instantiateViewController(withIdentifier:"demoBoard")
+        
+        if (userDefaults.bool(forKey:"isOnBoardingCompleted"))
+        {
+            // Method to request for users notification
             
-            if(error != nil)
-            {
-                print(error!)
-            }
-            else
-            {
-                UNUserNotificationCenter.current().delegate = self
-                Messaging.messaging().delegate = self
+            NotificationCenter.default.addObserver(self, selector:
+                #selector(tokenRefreshNotification), name:
+                NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+            
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound])
+            { (isGranted, error) in
                 
-                // Below code is added to remove warning UIApplication.registerForRemoteNotifications() must be used from main thread only
-                DispatchQueue.main.async(execute: {
-                    UIApplication.shared.registerForRemoteNotifications()
-                })
+                if(error != nil)
+                {
+                    print(error!)
+                }
+                else
+                {
+                    UNUserNotificationCenter.current().delegate = self
+                    Messaging.messaging().delegate = self
+                    
+                    // Below code is added to remove warning UIApplication.registerForRemoteNotifications() must be used from main thread only
+                    DispatchQueue.main.async(execute: {
+                        UIApplication.shared.registerForRemoteNotifications()
+                    })
+                }
             }
+            
+            initialViewController = storyBoard.instantiateViewController(withIdentifier:"mainScreen")
         }
         
-        FirebaseApp.configure()
+        window?.rootViewController = initialViewController
+        
+        window?.makeKeyAndVisible()
 
         return true
     }

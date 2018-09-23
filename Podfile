@@ -17,14 +17,10 @@ pod 'ChameleonFramework'
 pod 'AlamofireImage'
 pod 'Alamofire'
 pod 'Firebase/Messaging'
+pod 'paper-onboarding'
 
 target 'Chat On Notification Content Extension' do
-    pod 'AlamofireImage'
-end
-
-target 'Chat On Watch Extension' do
-    platform :watchos, '2.0'
-    pod 'AlamofireImage'
+    pod 'ChameleonFramework'
 end
 
 end
