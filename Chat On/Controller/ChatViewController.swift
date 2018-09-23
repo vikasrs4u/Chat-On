@@ -42,6 +42,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let myAppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        myAppDelegate.userNotificationInitialization()
+        
         messageTableViews.backgroundView = UIImageView(image: UIImage(named:"Message Background"))
 
         // Since we have table view, we need to regsiter our class as delegate and data source for the table view

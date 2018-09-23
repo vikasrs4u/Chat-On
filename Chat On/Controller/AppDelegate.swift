@@ -37,30 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         if (userDefaults.bool(forKey:"isOnBoardingCompleted"))
         {
-            // Method to request for users notification
             
-            NotificationCenter.default.addObserver(self, selector:
-                #selector(tokenRefreshNotification), name:
-                NSNotification.Name.InstanceIDTokenRefresh, object: nil)
-            
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound])
-            { (isGranted, error) in
-                
-                if(error != nil)
-                {
-                    print(error!)
-                }
-                else
-                {
-                    UNUserNotificationCenter.current().delegate = self
-                    Messaging.messaging().delegate = self
-                    
-                    // Below code is added to remove warning UIApplication.registerForRemoteNotifications() must be used from main thread only
-                    DispatchQueue.main.async(execute: {
-                        UIApplication.shared.registerForRemoteNotifications()
-                    })
-                }
-            }
             
             initialViewController = storyBoard.instantiateViewController(withIdentifier:"mainScreen")
         }
@@ -148,6 +125,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
         updateUserInfo(token:fcmToken)
 
+    }
+    
+    func userNotificationInitialization ()
+    {
+        // Method to request for users notification
+        
+        NotificationCenter.default.addObserver(self, selector:
+            #selector(tokenRefreshNotification), name:
+            NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound])
+        { (isGranted, error) in
+            
+            if(error != nil)
+            {
+                print(error!)
+            }
+            else
+            {
+                UNUserNotificationCenter.current().delegate = self
+                Messaging.messaging().delegate = self
+                
+                // Below code is added to remove warning UIApplication.registerForRemoteNotifications() must be used from main thread only
+                DispatchQueue.main.async(execute: {
+                    UIApplication.shared.registerForRemoteNotifications()
+                })
+            }
+        }
     }
 
 }

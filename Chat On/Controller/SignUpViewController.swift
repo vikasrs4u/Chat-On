@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate,UI
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+                
         // Code to make signup image view look round, instead of square.
         signUpImageViewOutlet.layer.cornerRadius = 50
         signUpImageViewOutlet.layer.masksToBounds = true

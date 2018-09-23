@@ -56,8 +56,8 @@ extension DemoScreenViewController:PaperOnboardingDataSource,PaperOnboardingDele
         {
             doneButtonOutlet.isHidden = true
             return OnboardingItemInfo(informationImage:UIImage(named:"Image1")!,
-                                      title: "Allow Notifications!!!",
-                                      description: "This will allow you to get notifications when your friends message in the group.",
+                                      title: "Easy Sign Up",
+                                      description: "You can upload your profile photo as well.",
                                       pageIcon: UIImage(named:"OnboardBackground")!,
                                       color: UIColor.white,
                                       titleColor: UIColor.black,
@@ -70,8 +70,8 @@ extension DemoScreenViewController:PaperOnboardingDataSource,PaperOnboardingDele
         {
             doneButtonOutlet.isHidden = true
             return OnboardingItemInfo(informationImage:UIImage(named:"Image2")!,
-                                      title: "Easy Sign Up",
-                                      description: "You can upload your profile photo as well.",
+                                      title: "Allow Notifications!!!",
+                                      description: "This will allow you to get notifications when your friends message in the group.",
                                       pageIcon: UIImage(named:"OnboardBackground")!,
                                       color: UIColor.white,
                                       titleColor: UIColor.black,
