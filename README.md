@@ -18,6 +18,9 @@ Chat On is a Chat app for iPhone that lets you chat with all the logged in user.
 
 <img width="200" alt="screen shot 2018-09-20 at 5 03 21 pm" src="https://user-images.githubusercontent.com/22437872/45853089-285e9a80-bcf8-11e8-92e5-b21ba6e6870f.PNG"> <img width="200" alt="screen shot 2018-09-20 at 5 03 21 pm" src="https://user-images.githubusercontent.com/22437872/45853098-2eed1200-bcf8-11e8-8f74-fd47a1a558e1.PNG"> <img width="200" alt="screen shot 2018-09-20 at 5 03 21 pm" src="https://user-images.githubusercontent.com/22437872/45853101-31e80280-bcf8-11e8-8f1d-66f66a511494.PNG"> <img width="200" alt="screen shot 2018-09-20 at 5 03 21 pm" src="https://user-images.githubusercontent.com/22437872/45853103-344a5c80-bcf8-11e8-8d51-ac2bfd765bca.PNG">
 
+### App Onboard Screen Demo
+
+![img_2931 trim mp4](https://user-images.githubusercontent.com/22437872/45924083-72d44880-beab-11e8-8090-acfbc0762a50.gif)
 
 ### App Sign Up Demo 
 
