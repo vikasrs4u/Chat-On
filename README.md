@@ -4,6 +4,8 @@ Chat On is a Chat app for iPhone that lets you chat with all the logged in user.
 
 ### App Demo Screenshots
 
+<img width="1038" alt="screen shot 2018-09-22 at 9 00 54 pm" src="https://user-images.githubusercontent.com/22437872/45924048-afec0b00-beaa-11e8-970b-50afc4faf6fd.png">
+
 <img width="927" alt="screen shot 2018-09-20 at 4 57 36 pm" src="https://user-images.githubusercontent.com/22437872/45852790-87bbab00-bcf6-11e8-8efa-b5fcb30825c3.png">
 
 <img width="895" alt="screen shot 2018-09-20 at 4 58 15 pm" src="https://user-images.githubusercontent.com/22437872/45852794-8a1e0500-bcf6-11e8-9023-7379bdfa9eb4.png">
@@ -54,27 +56,29 @@ Firebase Real-time Database
 
 1) Easy sign-up process powered by Firebase Authentication. 
 
-2) The user can upload the photo during signup, which will be reflected in the chat. 
+2) Beautiful onboard screen which gives information about the app. 
 
-3) The user can change the profile photo at the later point in time. 
+3) The user can upload the photo during signup, which will be reflected in the chat. 
 
-4) The app lets you Login with your email and password. 
+4) The user can change the profile photo at the later point in time. 
 
-5) All the logged in user gets the message in real-time. 
+5) The app lets you Login with your email and password. 
 
-6) When a user sends a message every person in the group is sent a Push Notification. 
+6) All the logged in user gets the message in real-time. 
 
-7) Apple Push notifications are powered by Firebase Cloud Functions. 
+7) When a user sends a message every person in the group is sent a Push Notification. 
 
-8) Even when a new member is added to the group all the other members receive push notification regarding the same. 
+8) Apple Push notifications are powered by Firebase Cloud Functions. 
 
-9) Rich customized notification with the image of the sender is shown. 
+9) Even when a new member is added to the group all the other members receive push notification regarding the same. 
 
-10) Clean and beautiful UI screens.
+10) Rich customized notification with the image of the sender is shown. 
 
-11) The app works in both portrait and landscape mode. 
+11) Clean and beautiful UI screens.
 
-12) App work across all iPhones starting from iPhone SE to iPhone XS Max and in all orientations. 
+12) The app works in both portrait and landscape mode. 
+
+13) App work across all iPhones starting from iPhone SE to iPhone XS Max and in all orientations. 
 
 
 ## License
