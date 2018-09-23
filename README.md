@@ -53,13 +53,16 @@ Firebase Real-time Database
 2) Firebase Auth
 3) SVProgressHUD
 4) ChameleonFramework
+5) AlamofireImage
+6) paper-onboarding
+7) Firebase/Messaging
 
 ### Features of the App:
 
 
 1) Easy sign-up process powered by Firebase Authentication. 
 
-2) Beautiful onboard screen which gives information about the app. 
+2) A beautiful onboard screen which gives information about the app before the user can sign up. 
 
 3) The user can upload the photo during signup, which will be reflected in the chat. 
 
