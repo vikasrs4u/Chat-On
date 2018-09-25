@@ -84,7 +84,7 @@ extension DemoScreenViewController:PaperOnboardingDataSource,PaperOnboardingDele
         {
             doneButtonOutlet.isHidden = false
             return OnboardingItemInfo(informationImage:UIImage(named:"Image3")!,
-                                      title: "Chat On!!!",
+                                      title: "Chat On",
                                       description: "",
                                       pageIcon: UIImage(named:"OnboardBackground")!,
                                       color: UIColor.white,

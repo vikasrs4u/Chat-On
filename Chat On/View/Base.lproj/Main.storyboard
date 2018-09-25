@@ -423,14 +423,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPd-EU-pmx" customClass="OnboardingViewClass" customModule="Chat_On" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIT-6H-9dV">
-                                <rect key="frame" x="147.5" y="587" width="80" height="30"/>
+                                <rect key="frame" x="87.5" y="541" width="200" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="RwH-Jz-U7v"/>
-                                    <constraint firstAttribute="height" constant="30" id="UtI-50-EZu"/>
+                                    <constraint firstAttribute="width" constant="200" id="RwH-Jz-U7v"/>
+                                    <constraint firstAttribute="height" constant="35" id="UtI-50-EZu"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -444,8 +446,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qIT-6H-9dV" firstAttribute="centerX" secondItem="PYw-4f-vWh" secondAttribute="centerX" id="MGB-d3-Tmx"/>
+                            <constraint firstItem="qIT-6H-9dV" firstAttribute="centerY" secondItem="PYw-4f-vWh" secondAttribute="centerY" constant="225" id="g0y-xu-dAe"/>
                             <constraint firstItem="zPd-EU-pmx" firstAttribute="bottom" secondItem="HEP-p2-AGs" secondAttribute="bottom" id="g3m-nC-T0y"/>
-                            <constraint firstItem="HEP-p2-AGs" firstAttribute="bottom" secondItem="qIT-6H-9dV" secondAttribute="bottom" constant="50" id="iOq-Ux-Qhz"/>
                             <constraint firstItem="zPd-EU-pmx" firstAttribute="trailing" secondItem="HEP-p2-AGs" secondAttribute="trailing" id="ngk-tF-wAa"/>
                             <constraint firstItem="zPd-EU-pmx" firstAttribute="leading" secondItem="HEP-p2-AGs" secondAttribute="leading" id="pe0-91-rEV"/>
                             <constraint firstItem="zPd-EU-pmx" firstAttribute="top" secondItem="PYw-4f-vWh" secondAttribute="top" id="sIn-wk-2ez"/>
@@ -479,10 +481,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background Image" width="2016" height="1512"/>
-        <image name="Default Avatar Image" width="250" height="250"/>
-        <image name="Login" width="980" height="2016"/>
-        <image name="SignUp" width="980" height="2016"/>
+        <image name="Background Image" width="4032" height="3024"/>
+        <image name="Default Avatar Image" width="500" height="500"/>
+        <image name="Login" width="1960" height="4032"/>
+        <image name="SignUp" width="1960" height="4032"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iFO-Ak-9YV"/>
